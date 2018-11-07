@@ -1,0 +1,55 @@
+title = "Фата мечты!"
+url = "/"
+layout = "main_layout"
+description = "Здесь каждой невесте можно найти Фату Мечты!"
+is_hidden = 0
+
+[magnific]
+idGallery = 1
+height = 400
+width = "auto"
+==
+<div class="jumbotron hidden-xs">
+	<div class="container">
+		<div class="banner-container">
+			<img src="http://oct-veil-shop-fin/storage/app/uploads/public/5bd/f28/395/5bdf28395ca84989959861.jpg" />
+			<div class="banner-link-container">
+				<a> <b> >> Как выбрать <em>Идеальную Фату</em>? </b></a>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="container">
+	<div class="preambula">
+		<p>>> Нажмите на понравившейся модели и закажите <em><u> бесплатную</u></em>  консультацию <b>любым удобным для вас способом</b> с нашим модельером >></p>
+	</div>
+	<div id="{{ magnific }}" class="magnific">
+	    <div class="container">
+	        <div class="row">
+	          {% for i, image in magnific.gallery.images %}
+							<div class="col-xs-6 col-sm-3">
+								<div class="picture-box thumb appearing-text-container">
+									<a href="{{ image.path }}">
+										<img class="img-thumbnail image-to-be-overlayed"
+												title="{{ image.title }}"
+												alt="{{ image.description }}"
+												src="{{ image.thumb( width , height ) }}"
+												width="{{ magnific.property('width') }}"
+												height="{{ magnific.property('height') }}"
+										/>
+									</a>
+									<div class="specific-appearing-symbol-container">
+										<span class="rounded-span appearing-symbol"> &#10084;</span>
+									</div>
+									<div class="specific-appearing-text-container">
+										<div class="appearing-text"> В ПОНРАВИВШИЕСЯ 	</div>
+								  </div>
+
+								</div>
+							</div>
+	          {% endfor %}
+	        </div>
+	    </div>
+	</div>
+</div>
