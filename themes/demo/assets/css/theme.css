@@ -487,3 +487,22 @@
 body {
   padding-top: 70px;
 }
+.black {
+	background-color: black;
+}
+.bottom-menu {
+	list-style-type: none;
+	color: lightpink;
+}
+.bottom-menu li {
+	border-right: 1px solid bisque;
+}
+.v-line {
+
+}
+.bottom-menu a {
+	color: bisque;
+}
+.bottom-menu a:hover {
+
+}

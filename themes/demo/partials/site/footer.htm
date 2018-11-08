@@ -1,6 +1,40 @@
+==
 <div id="footer">
-    <div class="container">
-        <hr />
-        <p class="muted credit">&copy; 2013 - {{ "now"|date("Y") }} Alexey Bobkov &amp; Samuel Georges.</p>
+    <div class="black">
+        <div class="container">
+	        <hr>
+	        <div class="row">
+		        <div class="col-sm-3"></div>
+
+		        <div class="col-sm-3">
+
+							<p class="footer-header"> <b>Карта сайта: </b></p>
+              <ul class="bottom-menu">
+                  <li class="{% if this.page.id == 'home' %}active{% endif %}"><a href="{{ 'home'|page }}">Виды свадебных фат</a></li>
+                  <li class="{% if this.page.id == 'ajax' %}active{% endif %}"><a href="{{ 'ajax'|page }}">Как выбрать фату?</a></li>
+                  <li class="{% if this.page.id == 'plugins' %}active{% endif %}"><a href="{{ 'plugins'|page }}">О нас</a></li>
+	                <li class="separator"><hr></li>
+              </ul>
+			        <p class="footer-header"> <b> Мы в социальных сетях </b></p>
+			        <p> Иконки социальных сетей </p>
+
+            </div>
+		        <div class="col-sm-5 text-justify">
+			        <p class="footer-header"> <b>У Вас остались вопросы? - Задайте их нам!</b></p>
+							<form action="">
+								<label> Введите Ваш вопрос: </label> <br>
+								<input type="text"/>  <br>
+								<label> Как к Вам обращаться? </label> <br>
+								<input type="text"/>
+<br>
+								<button type="submit"> Отпрвить вопрос </button>
+							</form>
+		        </div>
+		        <div class="col-sm-3"></div>
+	        </div>
+	        <div class="row">
+		        <p class="muted credit text-center">&copy; 2013 - {{ "now"|date("Y") }} Khlimat Saidudinova &amp; Leonid Muzyka.</p>
+	        </div>
+        </div>
     </div>
 </div>

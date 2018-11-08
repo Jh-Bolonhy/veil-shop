@@ -43,8 +43,8 @@ class __TwigTemplate_ddb60f9a96e26c997c30f1fe10e1f1e743756220187b81261366e00d223
             echo "active";
         }
         echo "\"><a href=\"";
-        echo $this->extensions['Cms\Twig\Extension']->pageFilter("home");
-        echo "\">Basic concepts</a></li>
+        echo $this->extensions['Cms\Twig\Extension']->pageFilter("magazin-fat-u-halimat");
+        echo "\">Виды фат </a></li>
                 <li class=\"";
         // line 16
         if ((twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, ($context["this"] ?? null), "page", array()), "id", array()) == "ajax")) {
@@ -52,7 +52,7 @@ class __TwigTemplate_ddb60f9a96e26c997c30f1fe10e1f1e743756220187b81261366e00d223
         }
         echo "\"><a href=\"";
         echo $this->extensions['Cms\Twig\Extension']->pageFilter("ajax");
-        echo "\">AJAX framework</a></li>
+        echo "\">Как выбрать</a></li>
                 <li class=\"";
         // line 17
         if ((twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, ($context["this"] ?? null), "page", array()), "id", array()) == "plugins")) {
@@ -60,7 +60,7 @@ class __TwigTemplate_ddb60f9a96e26c997c30f1fe10e1f1e743756220187b81261366e00d223
         }
         echo "\"><a href=\"";
         echo $this->extensions['Cms\Twig\Extension']->pageFilter("plugins");
-        echo "\">Plugin components</a></li>
+        echo "\">О нас</a></li>
 \t            <li class=\"separator hidden-xs\"></li>
 \t            <li class=\"nav-item\"><a class=\"navbar-link\" href=\"\"><span class=\"rounded-span\"> &nbsp&#10084;&nbsp</span></a></li>
 \t            <li class=\"nav-item\"><a class=\"navbar-link\" href=\"\"><span class=\"rounded-span\"> &nbsp 3 &nbsp </span></a></li>
@@ -71,7 +71,7 @@ class __TwigTemplate_ddb60f9a96e26c997c30f1fe10e1f1e743756220187b81261366e00d223
         }
         echo "\"><a class=\"navbar-link\" href=\"";
         echo $this->extensions['Cms\Twig\Extension']->pageFilter("plugins");
-        echo "\">Plugin components</a></li>
+        echo "\">Получить консультацию</a></li>
 
             </ul>
         </div>
@@ -110,13 +110,13 @@ class __TwigTemplate_ddb60f9a96e26c997c30f1fe10e1f1e743756220187b81261366e00d223
         </div>
         <div class=\"collapse navbar-collapse navbar-main-collapse pull-right\">
             <ul class=\"nav navbar-nav\">
-                <li class=\"{% if this.page.id == 'home' %}active{% endif %}\"><a href=\"{{ 'home'|page }}\">Basic concepts</a></li>
-                <li class=\"{% if this.page.id == 'ajax' %}active{% endif %}\"><a href=\"{{ 'ajax'|page }}\">AJAX framework</a></li>
-                <li class=\"{% if this.page.id == 'plugins' %}active{% endif %}\"><a href=\"{{ 'plugins'|page }}\">Plugin components</a></li>
+                <li class=\"{% if this.page.id == 'home' %}active{% endif %}\"><a href=\"{{ 'magazin-fat-u-halimat'|page }}\">Виды фат </a></li>
+                <li class=\"{% if this.page.id == 'ajax' %}active{% endif %}\"><a href=\"{{ 'ajax'|page }}\">Как выбрать</a></li>
+                <li class=\"{% if this.page.id == 'plugins' %}active{% endif %}\"><a href=\"{{ 'plugins'|page }}\">О нас</a></li>
 \t            <li class=\"separator hidden-xs\"></li>
 \t            <li class=\"nav-item\"><a class=\"navbar-link\" href=\"\"><span class=\"rounded-span\"> &nbsp&#10084;&nbsp</span></a></li>
 \t            <li class=\"nav-item\"><a class=\"navbar-link\" href=\"\"><span class=\"rounded-span\"> &nbsp 3 &nbsp </span></a></li>
-\t            <li class=\"nav-item {% if this.page.id == 'plugins' %}active{% endif %}\"><a class=\"navbar-link\" href=\"{{ 'plugins'|page }}\">Plugin components</a></li>
+\t            <li class=\"nav-item {% if this.page.id == 'plugins' %}active{% endif %}\"><a class=\"navbar-link\" href=\"{{ 'plugins'|page }}\">Получить консультацию</a></li>
 
             </ul>
         </div>
