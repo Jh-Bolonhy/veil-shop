@@ -1,0 +1,31 @@
+columns:
+    id:
+        label: 'leonidmuzyka.clients::lang.clients.id'
+        type: number
+        searchable: true
+        sortable: true
+    name:
+        label: name
+        type: text
+        searchable: true
+        sortable: true
+    phone:
+        label: phone
+        type: number
+        searchable: true
+        sortable: true
+    created_at:
+        label: created_at
+        type: datetime
+        searchable: true
+        sortable: true
+    updated_at:
+        label: updated_at
+        type: datetime
+        searchable: true
+        sortable: true
+    client_commentary:
+        label: client_commentary
+        type: text
+        searchable: true
+        sortable: false

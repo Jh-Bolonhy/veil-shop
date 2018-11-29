@@ -1,0 +1,14 @@
+1.0.1:
+    - 'Initialize plugin.'
+1.0.2:
+    - 'Created table leonidmuzyka_clients_orders'
+    - builder_table_create_leonidmuzyka_clients_orders.php
+1.0.3:
+    - 'Updated table leonidmuzyka_clients_orders'
+    - builder_table_update_leonidmuzyka_clients_orders.php
+1.0.4:
+    - 'Updated table leonidmuzyka_clients_orders'
+    - builder_table_update_leonidmuzyka_clients_orders_2.php
+1.0.5:
+    - 'Updated table leonidmuzyka_clients_orders'
+    - builder_table_update_leonidmuzyka_clients_orders_3.php

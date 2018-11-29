@@ -1,0 +1,24 @@
+plugin:
+    name: 'leonidmuzyka.clients::lang.plugin.name'
+    description: 'leonidmuzyka.clients::lang.plugin.description'
+    author: 'Leonid Muzyka'
+    icon: oc-icon-android
+    homepage: ''
+permissions:
+    manage_contacts:
+        tab: 'leonidmuzyka.clients::lang.clients.manage_contacts'
+        label: 'leonidmuzyka.clients::lang.clients.manage_contacts'
+navigation:
+    manage_contacts:
+        label: 'leonidmuzyka.clients::lang.clients.contacts'
+        url: leonidmuzyka/clients/clients
+        icon: icon-android
+        permissions:
+            - manage_contacts
+        sideMenu:
+            side-menu-item:
+                label: 'leonidmuzyka.clients::lang.clients.manage_contacts'
+                url: leonidmuzyka/clients/clients
+                icon: icon-street-view
+                permissions:
+                    - manage_contacts

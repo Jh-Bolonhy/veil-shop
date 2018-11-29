@@ -1,0 +1,10 @@
+name: Контакт
+modelClass: LeonidMuzyka\Clients\Models\Clients
+form: $/leonidmuzyka/clients/models/clients/fields.yaml
+defaultRedirect: leonidmuzyka/clients/clients
+create:
+    redirect: 'leonidmuzyka/clients/clients/update/:id'
+    redirectClose: leonidmuzyka/clients/clients
+update:
+    redirect: leonidmuzyka/clients/clients
+    redirectClose: leonidmuzyka/clients/clients
