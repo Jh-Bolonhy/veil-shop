@@ -9,7 +9,7 @@ class BuilderTableUpdateLeonidmuzykaClientsOrders2 extends Migration
     {
         Schema::table('leonidmuzyka_clients_orders', function($table)
         {
-            $table->string('client_commentary')->nullable();
+            $table->string('client_commentary')->nullable(); // Once again added
             $table->string('name')->change();
         });
     }
