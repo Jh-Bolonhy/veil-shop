@@ -506,3 +506,23 @@ body {
 .bottom-menu a:hover {
 
 }
+
+/*  Новые классы  */
+html,body {
+	height:100%;
+}
+.wrapper {
+  display: flex;
+	-webkit-flex-direction: column;
+  flex-direction: column;
+  height: 100%;
+}
+#layout-content {
+  flex: 1 0 auto;
+}
+#layout-footer {
+  flex: 0 0 auto;
+}
+textarea {
+    resize: none;
+}

@@ -1,0 +1,10 @@
+{% if flashMsg %}
+
+<p
+	data-control="flash-message"
+	data-interval="{{ flashMsg.type == 'success' ? '2' : '20' }}"
+	class="flash-message static {{ flashMsg.type }}"
+>
+	{{ flashMsg.msg }}
+</p>
+{% endif %}
