@@ -450,7 +450,6 @@
   background: saddlebrown;
 }
 .navbar-default .navbar-collapse:not(.in):not(.collapsing) .navbar-nav li.active > a:after,
-
 .navbar-pink {
 	background-color: #EAD5CC;
 	color: #000;
@@ -525,4 +524,116 @@ html,body {
 }
 textarea {
     resize: none;
+}
+button#toggle-navigation-btn {
+	background-color: #f4b9a0;
+	border-color: #999999;
+}
+
+button#toggle-navigation-btn:focus {
+	background-color: white;
+	border-color: #999999;
+}
+span#toggle-navigation-btn .icon-bar {
+	background-color: #999999;
+}
+li.active-page > a {
+	color: saddlebrown !important;
+}
+
+/* Далее все медиа классы */
+@media screen and (max-width: 767px) {
+	div.phone-menu {
+		width: 100%;
+	}
+	div.phone-menu > ul {
+		margin-top: 0px;
+		margin-bottom: 0px;
+	}
+	div.phone-menu > ul > li {
+		border-bottom: grey solid 1px;
+		padding-left: 50px;
+	}
+	.v-razdelitel, .dot-razdelitel {
+	 display: none !important;
+  }
+}
+
+/* Перенесённое из вендоров по медиа */
+@media (min-width: 768px) {
+  .navbar-nav {
+    float: left;
+    margin: 0;
+  }
+  .navbar-nav > li {
+    float: left;
+  }
+  .navbar-nav > li > a {
+    padding-top: 22.5px;
+    padding-bottom: 22.5px;
+  }
+	.v-razdelitel {
+		display: block;
+		margin: 20px 0px !important;
+  }
+	.dot-razdelitel {
+		width: 2px;
+		height: 2px;
+		background: saddlebrown;
+		margin: 35px 0px;
+
+	}
+}
+@media screen and (max-width: 999px) {
+	div.navbar-header {
+		width: 100%;
+	}
+	div.phone-menu {
+		background-color:#fed9c9;
+		opacity: .9;
+		border: 1px;
+		-webkit-border-radius: 0px 0px 5px 5px;
+		-moz-border-radius: 0px 0px 5px 5px;
+		border-radius: 0px 0px 5px 5px;
+	}
+
+}
+
+/* Перенесённое из вендоров по медиа */
+@media (min-width: 1000px) {
+	.container > .navbar-header,
+	.container-fluid > .navbar-header,
+	.container > .navbar-collapse,
+	.container-fluid > .navbar-collapse {
+		margin-right: 0;
+		margin-left: 0;
+	}
+
+	.navbar-toggle {
+		display: none;
+	}
+
+	.navbar-collapse {
+		width: auto;
+		border-top: 0;
+		box-shadow: none;
+	}
+
+	.navbar-collapse.collapse {
+		display: block !important;
+		height: auto !important;
+		padding-bottom: 0;
+		overflow: visible !important;
+	}
+
+	.navbar-collapse.in {
+		overflow-y: visible;
+	}
+
+	.navbar-fixed-top .navbar-collapse,
+	.navbar-static-top .navbar-collapse,
+	.navbar-fixed-bottom .navbar-collapse {
+		padding-left: 0;
+		padding-right: 0;
+	}
 }
