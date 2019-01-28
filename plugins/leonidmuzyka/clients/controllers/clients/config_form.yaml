@@ -8,3 +8,4 @@ create:
 update:
     redirect: leonidmuzyka/clients/clients
     redirectClose: leonidmuzyka/clients/clients
+preview: {  }

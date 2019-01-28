@@ -1,4 +1,4 @@
-1541681587a:1:{s:15:"main_layout.htm";a:6:{s:8:"fileName";s:15:"main_layout.htm";s:7:"content";s:1472:"description = "Main Layout for Vail-Shop"
+1548666599a:1:{s:15:"main_layout.htm";a:6:{s:8:"fileName";s:15:"main_layout.htm";s:7:"content";s:1509:"description = "Main Layout for Vail-Shop"
 ==
 <!DOCTYPE html>
 <html>
@@ -16,6 +16,7 @@
         {% styles %}
     </head>
     <body>
+    <div class="wrapper">
 
         <!-- Header -->
         <header id="layout-header">
@@ -38,9 +39,9 @@
         <script src="{{ 'assets/javascript/app.js'|theme }}"></script>
         {% framework extras %}
         {% scripts %}
-
+    </div>
     </body>
-</html>";s:5:"mtime";i:1541347797;s:6:"markup";s:1425:"<!DOCTYPE html>
+</html>";s:5:"mtime";i:1548570986;s:6:"markup";s:1462:"<!DOCTYPE html>
 <html>
     <head>
         <meta charset="utf-8">
@@ -56,6 +57,7 @@
         {% styles %}
     </head>
     <body>
+    <div class="wrapper">
 
         <!-- Header -->
         <header id="layout-header">
@@ -78,6 +80,6 @@
         <script src="{{ 'assets/javascript/app.js'|theme }}"></script>
         {% framework extras %}
         {% scripts %}
-
+    </div>
     </body>
 </html>";s:4:"code";N;s:11:"description";s:25:"Main Layout for Vail-Shop";}}

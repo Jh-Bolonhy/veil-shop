@@ -48,6 +48,9 @@
         </div>
     <?= Form::close() ?>
 
+<script src="http://oct-veil-shop-fin/plugins/leonidmuzyka/clients/assets/js/masking-input-for-be.js"></script>
+<script src="http://oct-veil-shop-fin/plugins/leonidmuzyka/clients/assets/js/masking-input.js" data-autoinit="true"></script>
+
 <?php else: ?>
     <p class="flash-message static error"><?= e(trans($this->fatalError)) ?></p>
     <p><a href="<?= Backend::url('leonidmuzyka/clients/clients') ?>" class="btn btn-default"><?= e(trans('backend::lang.form.return_to_list')) ?></a></p>

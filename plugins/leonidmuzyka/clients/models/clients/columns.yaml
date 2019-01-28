@@ -11,7 +11,7 @@ columns:
         sortable: true
     phone:
         label: phone
-        type: number
+        type: text
         searchable: true
         sortable: true
     created_at:

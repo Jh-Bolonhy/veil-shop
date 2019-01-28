@@ -20,7 +20,7 @@ class Clients extends Model
      */
     public $rules = [
 	    'name'                  => 'required|between:4,255',
-	    'phone'                 => 'required|between:4,255',
+	    'phone'                 => 'required|min:14|regex: /^[\pM\pN ()-]+$/u',
     ];
 
 			/**

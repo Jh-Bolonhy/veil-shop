@@ -11,8 +11,8 @@ fields:
         type: text
     phone:
         label: 'leonidmuzyka.clients::lang.clients.phone'
-        span: auto
-        type: number
+        span: right
+        type: text
     client_commentary:
         label: 'leonidmuzyka.clients::lang.clients.client_commentary'
         size: large

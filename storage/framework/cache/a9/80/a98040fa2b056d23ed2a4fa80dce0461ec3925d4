@@ -1,9 +1,9 @@
-1541681587a:1:{s:15:"site/header.htm";a:6:{s:8:"fileName";s:15:"site/header.htm";s:7:"content";s:1745:"==
+1548660784a:1:{s:15:"site/header.htm";a:6:{s:8:"fileName";s:15:"site/header.htm";s:7:"content";s:1922:"==
 <!-- Nav -->
 <nav id="layout-nav" class="navbar-pink navbar navbar-default navbar-fixed-top " role="navigation" >
     <div class="container">
         <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+            <button type="button" class="navbar-toggle" id="toggle-navigation-btn" data-toggle="collapse" data-target=".navbar-main-collapse">
                 <span class="sr-only">Toggle navigation</span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
@@ -11,25 +11,28 @@
             </button>
             <a class="navbar-brand" href="{{ 'magazin-fat-u-halimat'|page }}">Фаты = Мечты</a>
         </div>
-        <div class="collapse navbar-collapse navbar-main-collapse pull-right">
+        <div id="menu-to-collapse" class="collapse navbar-collapse navbar-main-collapse pull-right phone-menu">
             <ul class="nav navbar-nav">
-                <li class="{% if this.page.id == 'home' %}active{% endif %}"><a href="{{ 'magazin-fat-u-halimat'|page }}">Виды фат </a></li>
-                <li class="{% if this.page.id == 'ajax' %}active{% endif %}"><a href="{{ 'ajax'|page }}">Как выбрать</a></li>
-                <li class="{% if this.page.id == 'plugins' %}active{% endif %}"><a href="{{ 'plugins'|page }}">О нас</a></li>
-	            <li class="separator hidden-xs"></li>
-	            <li class="nav-item"><a class="navbar-link" href=""><span class="rounded-span"> &nbsp&#10084;&nbsp</span></a></li>
-	            <li class="nav-item"><a class="navbar-link" href=""><span class="rounded-span"> &nbsp 3 &nbsp </span></a></li>
-	            <li class="nav-item {% if this.page.id == 'plugins' %}active{% endif %}"><a class="navbar-link" href="{{ 'plugins'|page }}">Получить консультацию</a></li>
+
+              <li class="{% if this.page.id == 'magazin-fat-u-halimat' %}active-page{% endif %}"><a href="{{ 'magazin-fat-u-halimat'|page }}">Виды фат </a></li>
+	            <li class="dot-razdelitel"></li>
+	            <li class="{% if this.page.id == 'ajax' %}active-page{% endif %}"><a href="{{ 'ajax'|page }}">Как выбрать</a></li>
+	            <li class="dot-razdelitel"></li>
+              <li class="{% if this.page.id == 'plugins' %}active-page{% endif %}"><a href="{{ 'plugins'|page }}">О нас</a></li>
+	            <li class="separator v-razdelitel"></li>
+	            <li class="nav-item"><a class="navbar-link"><span class="rounded-span"> &nbsp&#10084;&nbsp</span> <span class="rounded-span"> &nbsp 3 &nbsp </span></a></li>
+	            <li class="separator v-razdelitel"></li>
+	            <li class="nav-item {% if this.page.id == 'testovaya-forma' %}active-page{% endif %}"><a class="navbar-link" href="{{ 'testovaya-forma'|page }}">Получить консультацию</a></li>
 
             </ul>
         </div>
     </div>
 </nav>
-";s:5:"mtime";i:1541680985;s:6:"markup";s:1739:"<!-- Nav -->
+";s:5:"mtime";i:1548008831;s:6:"markup";s:1916:"<!-- Nav -->
 <nav id="layout-nav" class="navbar-pink navbar navbar-default navbar-fixed-top " role="navigation" >
     <div class="container">
         <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+            <button type="button" class="navbar-toggle" id="toggle-navigation-btn" data-toggle="collapse" data-target=".navbar-main-collapse">
                 <span class="sr-only">Toggle navigation</span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
@@ -37,15 +40,18 @@
             </button>
             <a class="navbar-brand" href="{{ 'magazin-fat-u-halimat'|page }}">Фаты = Мечты</a>
         </div>
-        <div class="collapse navbar-collapse navbar-main-collapse pull-right">
+        <div id="menu-to-collapse" class="collapse navbar-collapse navbar-main-collapse pull-right phone-menu">
             <ul class="nav navbar-nav">
-                <li class="{% if this.page.id == 'home' %}active{% endif %}"><a href="{{ 'magazin-fat-u-halimat'|page }}">Виды фат </a></li>
-                <li class="{% if this.page.id == 'ajax' %}active{% endif %}"><a href="{{ 'ajax'|page }}">Как выбрать</a></li>
-                <li class="{% if this.page.id == 'plugins' %}active{% endif %}"><a href="{{ 'plugins'|page }}">О нас</a></li>
-	            <li class="separator hidden-xs"></li>
-	            <li class="nav-item"><a class="navbar-link" href=""><span class="rounded-span"> &nbsp&#10084;&nbsp</span></a></li>
-	            <li class="nav-item"><a class="navbar-link" href=""><span class="rounded-span"> &nbsp 3 &nbsp </span></a></li>
-	            <li class="nav-item {% if this.page.id == 'plugins' %}active{% endif %}"><a class="navbar-link" href="{{ 'plugins'|page }}">Получить консультацию</a></li>
+
+              <li class="{% if this.page.id == 'magazin-fat-u-halimat' %}active-page{% endif %}"><a href="{{ 'magazin-fat-u-halimat'|page }}">Виды фат </a></li>
+	            <li class="dot-razdelitel"></li>
+	            <li class="{% if this.page.id == 'ajax' %}active-page{% endif %}"><a href="{{ 'ajax'|page }}">Как выбрать</a></li>
+	            <li class="dot-razdelitel"></li>
+              <li class="{% if this.page.id == 'plugins' %}active-page{% endif %}"><a href="{{ 'plugins'|page }}">О нас</a></li>
+	            <li class="separator v-razdelitel"></li>
+	            <li class="nav-item"><a class="navbar-link"><span class="rounded-span"> &nbsp&#10084;&nbsp</span> <span class="rounded-span"> &nbsp 3 &nbsp </span></a></li>
+	            <li class="separator v-razdelitel"></li>
+	            <li class="nav-item {% if this.page.id == 'testovaya-forma' %}active-page{% endif %}"><a class="navbar-link" href="{{ 'testovaya-forma'|page }}">Получить консультацию</a></li>
 
             </ul>
         </div>

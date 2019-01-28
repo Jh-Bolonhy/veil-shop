@@ -1,0 +1,55 @@
+/* optional */
+
+.test-form li {
+  line-height: 2;
+}
+
+:invalid {
+  outline: 1px solid red; }
+
+.test-form.shell {
+  position: relative;
+  line-height: 1;
+}
+.test-form .shell span {
+    position: absolute;
+    left: 3px;
+    top: 1px;
+    color: #ccc;
+    pointer-events: none;
+    z-index: -1;
+  }
+.test-form  .shell span i {
+      font-style: normal;
+      /* any of these 3 will work */
+      color: transparent;
+      opacity: 0;
+      visibility: hidden;
+    }
+
+.test-form input.masked,
+.test-form .shell span {
+  font-size: 16px;
+  font-family: monospace;
+  padding-right: 10px;
+  background-color: transparent;
+  text-transform: uppercase; }
+
+/*# sourceMappingURL=masking-input.css.map */
+
+/* additional styles */
+.test-form li {
+	line-height: 2;
+	clear: both;
+	font-family: helvetica;
+	font-size: 0.93rem;
+}
+.test-form label {
+	display: inline-block;
+	width: 200px;
+}
+.shell span {
+	color: pink;
+	display: none;
+}
+

@@ -1,4 +1,4 @@
-1541681587a:1:{s:25:"magazin-fat-u-halimat.htm";a:11:{s:8:"fileName";s:25:"magazin-fat-u-halimat.htm";s:7:"content";s:1979:"title = "Фата мечты!"
+1548666598a:1:{s:25:"magazin-fat-u-halimat.htm";a:11:{s:8:"fileName";s:25:"magazin-fat-u-halimat.htm";s:7:"content";s:1979:"title = "Фата мечты!"
 url = "/"
 layout = "main_layout"
 description = "Здесь каждой невесте можно найти Фату Мечты!"
@@ -22,7 +22,7 @@ width = "auto"
 
 <div class="container">
 	<div class="preambula">
-		<p>>> Нажмите на понравившейся модели и закажите <em><u> бесплатную</u></em>  консультацию <b>любым удобным для вас способом</b> с нашим модельером >></p>
+		<p>>> Нажмите на понравившейся модели и закажите <em><u> бесплатную</u></em>  консультацию с нашим модельером <b>любым удобным для вас способом</b> >></p>
 	</div>
 	<div id="{{ magnific }}" class="magnific">
 	    <div class="container">
@@ -52,7 +52,7 @@ width = "auto"
 	        </div>
 	    </div>
 	</div>
-</div>";s:5:"mtime";i:1541354075;s:6:"markup";s:1735:"<div class="jumbotron hidden-xs">
+</div>";s:5:"mtime";i:1542957118;s:6:"markup";s:1735:"<div class="jumbotron hidden-xs">
 	<div class="container">
 		<div class="banner-container">
 			<img src="http://oct-veil-shop-fin/storage/app/uploads/public/5bd/f28/395/5bdf28395ca84989959861.jpg" />
@@ -65,7 +65,7 @@ width = "auto"
 
 <div class="container">
 	<div class="preambula">
-		<p>>> Нажмите на понравившейся модели и закажите <em><u> бесплатную</u></em>  консультацию <b>любым удобным для вас способом</b> с нашим модельером >></p>
+		<p>>> Нажмите на понравившейся модели и закажите <em><u> бесплатную</u></em>  консультацию с нашим модельером <b>любым удобным для вас способом</b> >></p>
 	</div>
 	<div id="{{ magnific }}" class="magnific">
 	    <div class="container">
