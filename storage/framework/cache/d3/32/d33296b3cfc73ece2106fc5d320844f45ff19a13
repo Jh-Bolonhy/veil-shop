@@ -1,10 +1,10 @@
-1548666599a:1:{s:15:"main_layout.htm";a:6:{s:8:"fileName";s:15:"main_layout.htm";s:7:"content";s:1509:"description = "Main Layout for Vail-Shop"
+1550047729a:1:{s:15:"main_layout.htm";a:6:{s:8:"fileName";s:15:"main_layout.htm";s:7:"content";s:1578:"description = "Main Layout for Vail-Shop"
 ==
 <!DOCTYPE html>
 <html>
     <head>
         <meta charset="utf-8">
-        <title>October CMS - {{ this.page.title }}</title>
+        <title>{{ this.page.title }}</title>
         <meta name="description" content="{{ this.page.meta_description }}">
         <meta name="title" content="{{ this.page.meta_title }}">
         <meta name="author" content="OctoberCMS">
@@ -37,15 +37,16 @@
         <script src="{{ 'assets/vendor/jquery.js'|theme }}"></script>
         <script src="{{ 'assets/vendor/bootstrap.js'|theme }}"></script>
         <script src="{{ 'assets/javascript/app.js'|theme }}"></script>
+        <script src="{{ 'assets/javascript/main_processes.js'|theme }}"></script>
         {% framework extras %}
         {% scripts %}
     </div>
     </body>
-</html>";s:5:"mtime";i:1548570986;s:6:"markup";s:1462:"<!DOCTYPE html>
+</html>";s:5:"mtime";i:1549974724;s:6:"markup";s:1531:"<!DOCTYPE html>
 <html>
     <head>
         <meta charset="utf-8">
-        <title>October CMS - {{ this.page.title }}</title>
+        <title>{{ this.page.title }}</title>
         <meta name="description" content="{{ this.page.meta_description }}">
         <meta name="title" content="{{ this.page.meta_title }}">
         <meta name="author" content="OctoberCMS">
@@ -78,6 +79,7 @@
         <script src="{{ 'assets/vendor/jquery.js'|theme }}"></script>
         <script src="{{ 'assets/vendor/bootstrap.js'|theme }}"></script>
         <script src="{{ 'assets/javascript/app.js'|theme }}"></script>
+        <script src="{{ 'assets/javascript/main_processes.js'|theme }}"></script>
         {% framework extras %}
         {% scripts %}
     </div>

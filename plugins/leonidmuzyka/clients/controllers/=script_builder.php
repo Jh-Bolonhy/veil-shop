@@ -1,14 +1,4 @@
-<?php 
-class Cms5c61c49c3067b441424052_056ce439a3ddc82dfb36fb3bd18aaf6fClass extends Cms\Classes\PageCode
-{
-public function onInit() {
-	session_start();
-	$this->page->pics_chosen = json_encode($_SESSION['pics_chosen']);
-}
-
-public function onUpdateChosenPics() {
-	return $_SESSION['pics_chosen'];
-}
+<?php
 
 public function onPicClick() {
 
@@ -50,4 +40,11 @@ public function onPicClick() {
 	echo "\n";
 	exit;
 }
-}
+
+	public function onUpdateChosenPics() {
+
+		return json_encode($_SESSION['pics_chosen']);
+	}
+
+
+

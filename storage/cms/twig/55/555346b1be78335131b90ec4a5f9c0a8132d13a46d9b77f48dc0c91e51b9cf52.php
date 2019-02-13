@@ -33,51 +33,54 @@ class __TwigTemplate_562111ae0a68379055cb2ab34bdc7a82edca4a3696917636bf02e133634
 
 <div class=\"container\">
 \t<div class=\"preambula\">
-\t\t<p>>> Нажмите на понравившейся модели и закажите <em><u> бесплатную</u></em>  консультацию <b>любым удобным для вас способом</b> с нашим модельером >></p>
+\t\t<p>>> Нажмите на понравившейся модели и закажите <em><u> бесплатную</u></em>  консультацию с нашим модельером <b>любым удобным для вас способом</b> >></p>
 \t</div>
+
 \t<div id=\"";
-        // line 16
+        // line 17
         echo twig_escape_filter($this->env, ($context["magnific"] ?? null), "html", null, true);
         echo "\" class=\"magnific\">
 \t    <div class=\"container\">
 \t        <div class=\"row\">
 \t          ";
-        // line 19
+        // line 20
         $context['_parent'] = $context;
         $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, ($context["magnific"] ?? null), "gallery", array()), "images", array()));
         foreach ($context['_seq'] as $context["i"] => $context["image"]) {
-            // line 20
+            // line 21
             echo "\t\t\t\t\t\t\t<div class=\"col-xs-6 col-sm-3\">
 \t\t\t\t\t\t\t\t<div class=\"picture-box thumb appearing-text-container\">
 \t\t\t\t\t\t\t\t\t<a href=\"";
-            // line 22
+            // line 23
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["image"], "path", array()), "html", null, true);
-            echo "\">
+            echo "\" data-request=\"onPicClick\" data-request-data=\"pic_url: '";
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["image"], "path", array()), "html", null, true);
+            echo "'\">
 \t\t\t\t\t\t\t\t\t\t<img class=\"img-thumbnail image-to-be-overlayed\"
 \t\t\t\t\t\t\t\t\t\t\t\ttitle=\"";
-            // line 24
+            // line 25
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["image"], "title", array()), "html", null, true);
             echo "\"
 \t\t\t\t\t\t\t\t\t\t\t\talt=\"";
-            // line 25
+            // line 26
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["image"], "description", array()), "html", null, true);
             echo "\"
 \t\t\t\t\t\t\t\t\t\t\t\tsrc=\"";
-            // line 26
+            // line 27
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["image"], "thumb", array(0 => ($context["width"] ?? null), 1 => ($context["height"] ?? null)), "method"), "html", null, true);
             echo "\"
 \t\t\t\t\t\t\t\t\t\t\t\twidth=\"";
-            // line 27
+            // line 28
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, ($context["magnific"] ?? null), "property", array(0 => "width"), "method"), "html", null, true);
             echo "\"
 \t\t\t\t\t\t\t\t\t\t\t\theight=\"";
-            // line 28
+            // line 29
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, ($context["magnific"] ?? null), "property", array(0 => "height"), "method"), "html", null, true);
             echo "\"
 \t\t\t\t\t\t\t\t\t\t/>
 \t\t\t\t\t\t\t\t\t</a>
 \t\t\t\t\t\t\t\t\t<div class=\"specific-appearing-symbol-container\">
-\t\t\t\t\t\t\t\t\t\t<span class=\"rounded-span appearing-symbol\"> &#10084;</span>
+\t\t\t\t\t\t\t\t\t\t<span class=\"appearing-symbol\"> &#9825; </span>
 \t\t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t\t<div class=\"specific-appearing-text-container\">
 \t\t\t\t\t\t\t\t\t\t<div class=\"appearing-text\"> В ПОНРАВИВШИЕСЯ \t</div>
@@ -90,11 +93,15 @@ class __TwigTemplate_562111ae0a68379055cb2ab34bdc7a82edca4a3696917636bf02e133634
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['i'], $context['image'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 41
+        // line 42
         echo "\t        </div>
 \t    </div>
 \t</div>
-</div>";
+</div>
+<div id=\"dumper\"> ";
+        // line 46
+        echo $this->extensions['Cms\Twig\DebugExtension']->runDump($this->env, $context);
+        echo "</div>";
     }
 
     public function getTemplateName()
@@ -109,7 +116,7 @@ class __TwigTemplate_562111ae0a68379055cb2ab34bdc7a82edca4a3696917636bf02e133634
 
     public function getDebugInfo()
     {
-        return array (  94 => 41,  75 => 28,  71 => 27,  67 => 26,  63 => 25,  59 => 24,  54 => 22,  50 => 20,  46 => 19,  40 => 16,  23 => 1,);
+        return array (  103 => 46,  97 => 42,  78 => 29,  74 => 28,  70 => 27,  66 => 26,  62 => 25,  55 => 23,  51 => 21,  47 => 20,  41 => 17,  23 => 1,);
     }
 
     public function getSourceContext()
@@ -127,15 +134,16 @@ class __TwigTemplate_562111ae0a68379055cb2ab34bdc7a82edca4a3696917636bf02e133634
 
 <div class=\"container\">
 \t<div class=\"preambula\">
-\t\t<p>>> Нажмите на понравившейся модели и закажите <em><u> бесплатную</u></em>  консультацию <b>любым удобным для вас способом</b> с нашим модельером >></p>
+\t\t<p>>> Нажмите на понравившейся модели и закажите <em><u> бесплатную</u></em>  консультацию с нашим модельером <b>любым удобным для вас способом</b> >></p>
 \t</div>
+
 \t<div id=\"{{ magnific }}\" class=\"magnific\">
 \t    <div class=\"container\">
 \t        <div class=\"row\">
 \t          {% for i, image in magnific.gallery.images %}
 \t\t\t\t\t\t\t<div class=\"col-xs-6 col-sm-3\">
 \t\t\t\t\t\t\t\t<div class=\"picture-box thumb appearing-text-container\">
-\t\t\t\t\t\t\t\t\t<a href=\"{{ image.path }}\">
+\t\t\t\t\t\t\t\t\t<a href=\"{{ image.path }}\" data-request=\"onPicClick\" data-request-data=\"pic_url: '{{ image.path }}'\">
 \t\t\t\t\t\t\t\t\t\t<img class=\"img-thumbnail image-to-be-overlayed\"
 \t\t\t\t\t\t\t\t\t\t\t\ttitle=\"{{ image.title }}\"
 \t\t\t\t\t\t\t\t\t\t\t\talt=\"{{ image.description }}\"
@@ -145,7 +153,7 @@ class __TwigTemplate_562111ae0a68379055cb2ab34bdc7a82edca4a3696917636bf02e133634
 \t\t\t\t\t\t\t\t\t\t/>
 \t\t\t\t\t\t\t\t\t</a>
 \t\t\t\t\t\t\t\t\t<div class=\"specific-appearing-symbol-container\">
-\t\t\t\t\t\t\t\t\t\t<span class=\"rounded-span appearing-symbol\"> &#10084;</span>
+\t\t\t\t\t\t\t\t\t\t<span class=\"appearing-symbol\"> &#9825; </span>
 \t\t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t\t<div class=\"specific-appearing-text-container\">
 \t\t\t\t\t\t\t\t\t\t<div class=\"appearing-text\"> В ПОНРАВИВШИЕСЯ \t</div>
@@ -157,6 +165,7 @@ class __TwigTemplate_562111ae0a68379055cb2ab34bdc7a82edca4a3696917636bf02e133634
 \t        </div>
 \t    </div>
 \t</div>
-</div>", "E:\\xampp\\htdocs\\oct-veil-shop-fin/themes/demo/pages/magazin-fat-u-halimat.htm", "");
+</div>
+<div id=\"dumper\"> {{ dump() }}</div>", "E:\\xampp\\htdocs\\oct-veil-shop-fin/themes/demo/pages/magazin-fat-u-halimat.htm", "");
     }
 }

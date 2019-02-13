@@ -1,4 +1,4 @@
-1548660784a:1:{s:15:"site/header.htm";a:6:{s:8:"fileName";s:15:"site/header.htm";s:7:"content";s:1922:"==
+1550047729a:1:{s:15:"site/header.htm";a:6:{s:8:"fileName";s:15:"site/header.htm";s:7:"content";s:1912:"==
 <!-- Nav -->
 <nav id="layout-nav" class="navbar-pink navbar navbar-default navbar-fixed-top " role="navigation" >
     <div class="container">
@@ -9,7 +9,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="{{ 'magazin-fat-u-halimat'|page }}">Фаты = Мечты</a>
+            <a class="navbar-brand" href="{{ 'magazin-fat-u-halimat'|page }}">HaliFata.RU</a>
         </div>
         <div id="menu-to-collapse" class="collapse navbar-collapse navbar-main-collapse pull-right phone-menu">
             <ul class="nav navbar-nav">
@@ -28,7 +28,7 @@
         </div>
     </div>
 </nav>
-";s:5:"mtime";i:1548008831;s:6:"markup";s:1916:"<!-- Nav -->
+";s:5:"mtime";i:1549974724;s:6:"markup";s:1906:"<!-- Nav -->
 <nav id="layout-nav" class="navbar-pink navbar navbar-default navbar-fixed-top " role="navigation" >
     <div class="container">
         <div class="navbar-header">
@@ -38,7 +38,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="{{ 'magazin-fat-u-halimat'|page }}">Фаты = Мечты</a>
+            <a class="navbar-brand" href="{{ 'magazin-fat-u-halimat'|page }}">HaliFata.RU</a>
         </div>
         <div id="menu-to-collapse" class="collapse navbar-collapse navbar-main-collapse pull-right phone-menu">
             <ul class="nav navbar-nav">

@@ -289,7 +289,7 @@ img.mfp-img {
   cursor: pointer; }
 
 
-/* Start of the handMade Section */
+/* Дополнительные стили */
 
 	#magnific div div a img:hover {
 		background-color: #fff;
@@ -311,7 +311,7 @@ img.mfp-img {
 	    max-width: 100%;
 	    height: auto;
 	}
-/* overlaying stuff */
+/* Появляющийся символ */
 
 	.appearing-text-container:hover .image-to-be-overlayed {
 	  opacity: 0.76;
@@ -358,15 +358,18 @@ img.mfp-img {
 
 	.appearing-symbol {
 	  color: #A88777;
-	  font-size: 23px;
+	  font-size: 28px;
 	  padding: 10px 10px;
 	}
 	.rounded-span {
 	  border-radius: 100px;
 		border: 2px solid #A88777;
 	}
+	.appeared {
+		opacity: 1;
+	}
 
-/* End of the handMade Section */
+/* Конец рукотворной секции */
 
 @media screen and (max-width: 800px) and (orientation: landscape), screen and (max-height: 300px) {
   /**

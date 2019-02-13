@@ -33,7 +33,7 @@ class __TwigTemplate_ddb60f9a96e26c997c30f1fe10e1f1e743756220187b81261366e00d223
             <a class=\"navbar-brand\" href=\"";
         // line 11
         echo $this->extensions['Cms\Twig\Extension']->pageFilter("magazin-fat-u-halimat");
-        echo "\">Фаты = Мечты</a>
+        echo "\">HaliFata.RU</a>
         </div>
         <div id=\"menu-to-collapse\" class=\"collapse navbar-collapse navbar-main-collapse pull-right phone-menu\">
             <ul class=\"nav navbar-nav\">
@@ -109,7 +109,7 @@ class __TwigTemplate_ddb60f9a96e26c997c30f1fe10e1f1e743756220187b81261366e00d223
                 <span class=\"icon-bar\"></span>
                 <span class=\"icon-bar\"></span>
             </button>
-            <a class=\"navbar-brand\" href=\"{{ 'magazin-fat-u-halimat'|page }}\">Фаты = Мечты</a>
+            <a class=\"navbar-brand\" href=\"{{ 'magazin-fat-u-halimat'|page }}\">HaliFata.RU</a>
         </div>
         <div id=\"menu-to-collapse\" class=\"collapse navbar-collapse navbar-main-collapse pull-right phone-menu\">
             <ul class=\"nav navbar-nav\">

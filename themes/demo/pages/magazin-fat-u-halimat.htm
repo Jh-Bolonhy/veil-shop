@@ -9,6 +9,58 @@ idGallery = 1
 height = 400
 width = "auto"
 ==
+
+public function onInit() {
+	session_start();
+	$this->page->pics_chosen = json_encode($_SESSION['pics_chosen']);
+}
+
+public function onUpdateChosenPics() {
+	return $_SESSION['pics_chosen'];
+}
+
+public function onPicClick() {
+
+	$pic_url = post('pic_url');
+
+	$pics_chosen = $_SESSION['pics_chosen'];
+
+	// Var for checking if deleting
+	$ifDeleting = false;
+	if (empty($pics_chosen)) {
+		echo '| array empty | Adding. ';
+		$pics_chosen[] = $pic_url;
+	} else { // $pics_chosen is _NOT_ empty
+		// Checking if pic.clicked is already in the array
+		echo '| Array is not empty ';
+		foreach ($pics_chosen as $key => $item) {
+			if ($item == $pic_url){
+				// We already have this picture in $pics_chosen = So we are deleting
+				array_splice($pics_chosen,$key,1);
+				$ifDeleting = true;
+				echo '| Deleting ';
+				break;
+			}
+		}
+		if ($ifDeleting == false) { // In that case we have to add element as well
+
+			if (count($pics_chosen) >= 3){
+				echo '| Array is full. ';
+				exit;
+			}
+			echo '| Adding. ';
+			$pics_chosen[] = $pic_url;
+		}
+	}
+
+	$_SESSION['pics_chosen'] = $pics_chosen;
+	$this->page['for_dump'] = $pics_chosen;
+	var_dump($_SESSION['pics_chosen']);
+	echo "\n";
+	exit;
+}
+
+==
 <div class="jumbotron hidden-xs">
 	<div class="container">
 		<div class="banner-container">
@@ -24,13 +76,14 @@ width = "auto"
 	<div class="preambula">
 		<p>>> Нажмите на понравившейся модели и закажите <em><u> бесплатную</u></em>  консультацию с нашим модельером <b>любым удобным для вас способом</b> >></p>
 	</div>
+
 	<div id="{{ magnific }}" class="magnific">
 	    <div class="container">
 	        <div class="row">
 	          {% for i, image in magnific.gallery.images %}
 							<div class="col-xs-6 col-sm-3">
 								<div class="picture-box thumb appearing-text-container">
-									<a href="{{ image.path }}">
+									<a href="{{ image.path }}" data-request="onPicClick" data-request-data="pic_url: '{{ image.path }}'">
 										<img class="img-thumbnail image-to-be-overlayed"
 												title="{{ image.title }}"
 												alt="{{ image.description }}"
@@ -40,7 +93,7 @@ width = "auto"
 										/>
 									</a>
 									<div class="specific-appearing-symbol-container">
-										<span class="rounded-span appearing-symbol"> &#10084;</span>
+										<span class="appearing-symbol"> &#9825; </span>
 									</div>
 									<div class="specific-appearing-text-container">
 										<div class="appearing-text"> В ПОНРАВИВШИЕСЯ 	</div>
@@ -53,3 +106,4 @@ width = "auto"
 	    </div>
 	</div>
 </div>
+<div id="dumper"> {{ dump() }}</div>

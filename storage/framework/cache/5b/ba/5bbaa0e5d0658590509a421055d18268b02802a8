@@ -1,4 +1,4 @@
-1548666598a:1:{s:25:"magazin-fat-u-halimat.htm";a:11:{s:8:"fileName";s:25:"magazin-fat-u-halimat.htm";s:7:"content";s:1979:"title = "Фата мечты!"
+1550047729a:1:{s:25:"magazin-fat-u-halimat.htm";a:11:{s:8:"fileName";s:25:"magazin-fat-u-halimat.htm";s:7:"content";s:3315:"title = "Фата мечты!"
 url = "/"
 layout = "main_layout"
 description = "Здесь каждой невесте можно найти Фату Мечты!"
@@ -8,6 +8,58 @@ is_hidden = 0
 idGallery = 1
 height = 400
 width = "auto"
+==
+
+public function onInit() {
+	session_start();
+	$this->page->pics_chosen = json_encode($_SESSION['pics_chosen']);
+}
+
+public function onUpdateChosenPics() {
+	return $_SESSION['pics_chosen'];
+}
+
+public function onPicClick() {
+
+	$pic_url = post('pic_url');
+
+	$pics_chosen = $_SESSION['pics_chosen'];
+
+	// Var for checking if deleting
+	$ifDeleting = false;
+	if (empty($pics_chosen)) {
+		echo '| array empty | Adding. ';
+		$pics_chosen[] = $pic_url;
+	} else { // $pics_chosen is _NOT_ empty
+		// Checking if pic.clicked is already in the array
+		echo '| Array is not empty ';
+		foreach ($pics_chosen as $key => $item) {
+			if ($item == $pic_url){
+				// We already have this picture in $pics_chosen = So we are deleting
+				array_splice($pics_chosen,$key,1);
+				$ifDeleting = true;
+				echo '| Deleting ';
+				break;
+			}
+		}
+		if ($ifDeleting == false) { // In that case we have to add element as well
+
+			if (count($pics_chosen) >= 3){
+				echo '| Array is full. ';
+				exit;
+			}
+			echo '| Adding. ';
+			$pics_chosen[] = $pic_url;
+		}
+	}
+
+	$_SESSION['pics_chosen'] = $pics_chosen;
+	$this->page['for_dump'] = $pics_chosen;
+	var_dump($_SESSION['pics_chosen']);
+	echo "\n";
+	exit;
+}
+
 ==
 <div class="jumbotron hidden-xs">
 	<div class="container">
@@ -24,13 +76,14 @@ width = "auto"
 	<div class="preambula">
 		<p>>> Нажмите на понравившейся модели и закажите <em><u> бесплатную</u></em>  консультацию с нашим модельером <b>любым удобным для вас способом</b> >></p>
 	</div>
+
 	<div id="{{ magnific }}" class="magnific">
 	    <div class="container">
 	        <div class="row">
 	          {% for i, image in magnific.gallery.images %}
 							<div class="col-xs-6 col-sm-3">
 								<div class="picture-box thumb appearing-text-container">
-									<a href="{{ image.path }}">
+									<a href="{{ image.path }}" data-request="onPicClick" data-request-data="pic_url: '{{ image.path }}'">
 										<img class="img-thumbnail image-to-be-overlayed"
 												title="{{ image.title }}"
 												alt="{{ image.description }}"
@@ -40,7 +93,7 @@ width = "auto"
 										/>
 									</a>
 									<div class="specific-appearing-symbol-container">
-										<span class="rounded-span appearing-symbol"> &#10084;</span>
+										<span class="appearing-symbol"> &#9825; </span>
 									</div>
 									<div class="specific-appearing-text-container">
 										<div class="appearing-text"> В ПОНРАВИВШИЕСЯ 	</div>
@@ -52,7 +105,8 @@ width = "auto"
 	        </div>
 	    </div>
 	</div>
-</div>";s:5:"mtime";i:1542957118;s:6:"markup";s:1735:"<div class="jumbotron hidden-xs">
+</div>
+<div id="dumper"> {{ dump() }}</div>";s:5:"mtime";i:1549911148;s:6:"markup";s:1836:"<div class="jumbotron hidden-xs">
 	<div class="container">
 		<div class="banner-container">
 			<img src="http://oct-veil-shop-fin/storage/app/uploads/public/5bd/f28/395/5bdf28395ca84989959861.jpg" />
@@ -67,13 +121,14 @@ width = "auto"
 	<div class="preambula">
 		<p>>> Нажмите на понравившейся модели и закажите <em><u> бесплатную</u></em>  консультацию с нашим модельером <b>любым удобным для вас способом</b> >></p>
 	</div>
+
 	<div id="{{ magnific }}" class="magnific">
 	    <div class="container">
 	        <div class="row">
 	          {% for i, image in magnific.gallery.images %}
 							<div class="col-xs-6 col-sm-3">
 								<div class="picture-box thumb appearing-text-container">
-									<a href="{{ image.path }}">
+									<a href="{{ image.path }}" data-request="onPicClick" data-request-data="pic_url: '{{ image.path }}'">
 										<img class="img-thumbnail image-to-be-overlayed"
 												title="{{ image.title }}"
 												alt="{{ image.description }}"
@@ -83,7 +138,7 @@ width = "auto"
 										/>
 									</a>
 									<div class="specific-appearing-symbol-container">
-										<span class="rounded-span appearing-symbol"> &#10084;</span>
+										<span class="appearing-symbol"> &#9825; </span>
 									</div>
 									<div class="specific-appearing-text-container">
 										<div class="appearing-text"> В ПОНРАВИВШИЕСЯ 	</div>
@@ -95,4 +150,53 @@ width = "auto"
 	        </div>
 	    </div>
 	</div>
-</div>";s:4:"code";N;s:5:"title";s:20:"Фата мечты!";s:3:"url";s:1:"/";s:6:"layout";s:11:"main_layout";s:11:"description";s:81:"Здесь каждой невесте можно найти Фату Мечты!";s:9:"is_hidden";s:1:"0";s:8:"magnific";a:3:{s:9:"idGallery";s:1:"1";s:6:"height";s:3:"400";s:5:"width";s:4:"auto";}}}
+</div>
+<div id="dumper"> {{ dump() }}</div>";s:4:"code";s:1225:"public function onInit() {
+	session_start();
+	$this->page->pics_chosen = json_encode($_SESSION['pics_chosen']);
+}
+
+public function onUpdateChosenPics() {
+	return $_SESSION['pics_chosen'];
+}
+
+public function onPicClick() {
+
+	$pic_url = post('pic_url');
+
+	$pics_chosen = $_SESSION['pics_chosen'];
+
+	// Var for checking if deleting
+	$ifDeleting = false;
+	if (empty($pics_chosen)) {
+		echo '| array empty | Adding. ';
+		$pics_chosen[] = $pic_url;
+	} else { // $pics_chosen is _NOT_ empty
+		// Checking if pic.clicked is already in the array
+		echo '| Array is not empty ';
+		foreach ($pics_chosen as $key => $item) {
+			if ($item == $pic_url){
+				// We already have this picture in $pics_chosen = So we are deleting
+				array_splice($pics_chosen,$key,1);
+				$ifDeleting = true;
+				echo '| Deleting ';
+				break;
+			}
+		}
+		if ($ifDeleting == false) { // In that case we have to add element as well
+
+			if (count($pics_chosen) >= 3){
+				echo '| Array is full. ';
+				exit;
+			}
+			echo '| Adding. ';
+			$pics_chosen[] = $pic_url;
+		}
+	}
+
+	$_SESSION['pics_chosen'] = $pics_chosen;
+	$this->page['for_dump'] = $pics_chosen;
+	var_dump($_SESSION['pics_chosen']);
+	echo "\n";
+	exit;
+}";s:5:"title";s:20:"Фата мечты!";s:3:"url";s:1:"/";s:6:"layout";s:11:"main_layout";s:11:"description";s:81:"Здесь каждой невесте можно найти Фату Мечты!";s:9:"is_hidden";s:1:"0";s:8:"magnific";a:3:{s:9:"idGallery";s:1:"1";s:6:"height";s:3:"400";s:5:"width";s:4:"auto";}}}

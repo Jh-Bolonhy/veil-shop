@@ -26,8 +26,8 @@ class Orderform extends ComponentBase
         return [];
     }
 
-
     public function onRun() {
+
 	    $scss = [
 	          'assets\css\default.scss'
 	        ];
@@ -47,6 +47,8 @@ class Orderform extends ComponentBase
 	    $this -> addCss(CombineAssets::combine($css, plugins_path() . '\leonidmuzyka\clients'));
 			$this->page ['plugins_path'] = plugins_path();
 
+			session_start();
+			$this->loadSessionVars();
 
     }
 	/**
@@ -90,8 +92,6 @@ class Orderform extends ComponentBase
 		 *  Преорбазование phone_test'a к виду интежера
 		 */
 
-			//$char_phone = substr(post('phone_test'),1,3).substr(post('phone_test'),6, 3).substr(post('phone_test'),10);
-			//$this->page['char_phone_pre'] = $char_phone;
 
 			/**
 			 * Запись в базу
@@ -113,4 +113,15 @@ class Orderform extends ComponentBase
       				];
 			Redirect::back()->withInput();
     }
+
+
+
+	public function onUpdateChosenPics() {
+		session_start();
+		return $_SESSION['pics_chosen'];
+	}
+
+	private function loadSessionVars() {
+		$this->page ['pics_chosen'] = $_SESSION['pics_chosen'];
+	}
 }

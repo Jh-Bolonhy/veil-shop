@@ -24,7 +24,7 @@ class __TwigTemplate_8d0fdab0884e4c1efb7a811890acaf1fd42a3d89cfabcba3b99433ae49d
 <html>
     <head>
         <meta charset=\"utf-8\">
-        <title>October CMS - ";
+        <title>";
         // line 5
         echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, ($context["this"] ?? null), "page", array()), "title", array()), "html", null, true);
         echo "</title>
@@ -101,8 +101,12 @@ class __TwigTemplate_8d0fdab0884e4c1efb7a811890acaf1fd42a3d89cfabcba3b99433ae49d
         // line 37
         echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/javascript/app.js");
         echo "\"></script>
-        ";
+        <script src=\"";
         // line 38
+        echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/javascript/main_processes.js");
+        echo "\"></script>
+        ";
+        // line 39
         $_minify = System\Classes\CombineAssets::instance()->useMinify;
         if ($_minify) {
             echo '<script src="'. Request::getBasePath()
@@ -117,11 +121,11 @@ class __TwigTemplate_8d0fdab0884e4c1efb7a811890acaf1fd42a3d89cfabcba3b99433ae49d
         echo '<link rel="stylesheet" property="stylesheet" href="'. Request::getBasePath()
                     .'/modules/system/assets/css/framework.extras'.($_minify ? '-min' : '').'.css">'.PHP_EOL;
         unset($_minify);
-        // line 39
+        // line 40
         echo "        ";
         echo $this->env->getExtension('Cms\Twig\Extension')->assetsFunction('js');
         echo $this->env->getExtension('Cms\Twig\Extension')->displayBlock('scripts');
-        // line 40
+        // line 41
         echo "    </div>
     </body>
 </html>";
@@ -139,7 +143,7 @@ class __TwigTemplate_8d0fdab0884e4c1efb7a811890acaf1fd42a3d89cfabcba3b99433ae49d
 
     public function getDebugInfo()
     {
-        return array (  125 => 40,  121 => 39,  106 => 38,  102 => 37,  98 => 36,  94 => 35,  89 => 32,  85 => 31,  79 => 27,  77 => 26,  71 => 22,  67 => 21,  59 => 15,  56 => 14,  52 => 13,  48 => 12,  44 => 11,  37 => 7,  33 => 6,  29 => 5,  23 => 1,);
+        return array (  129 => 41,  125 => 40,  110 => 39,  106 => 38,  102 => 37,  98 => 36,  94 => 35,  89 => 32,  85 => 31,  79 => 27,  77 => 26,  71 => 22,  67 => 21,  59 => 15,  56 => 14,  52 => 13,  48 => 12,  44 => 11,  37 => 7,  33 => 6,  29 => 5,  23 => 1,);
     }
 
     public function getSourceContext()
@@ -148,7 +152,7 @@ class __TwigTemplate_8d0fdab0884e4c1efb7a811890acaf1fd42a3d89cfabcba3b99433ae49d
 <html>
     <head>
         <meta charset=\"utf-8\">
-        <title>October CMS - {{ this.page.title }}</title>
+        <title>{{ this.page.title }}</title>
         <meta name=\"description\" content=\"{{ this.page.meta_description }}\">
         <meta name=\"title\" content=\"{{ this.page.meta_title }}\">
         <meta name=\"author\" content=\"OctoberCMS\">
@@ -181,6 +185,7 @@ class __TwigTemplate_8d0fdab0884e4c1efb7a811890acaf1fd42a3d89cfabcba3b99433ae49d
         <script src=\"{{ 'assets/vendor/jquery.js'|theme }}\"></script>
         <script src=\"{{ 'assets/vendor/bootstrap.js'|theme }}\"></script>
         <script src=\"{{ 'assets/javascript/app.js'|theme }}\"></script>
+        <script src=\"{{ 'assets/javascript/main_processes.js'|theme }}\"></script>
         {% framework extras %}
         {% scripts %}
     </div>
