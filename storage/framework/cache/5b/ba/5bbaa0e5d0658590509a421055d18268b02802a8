@@ -1,4 +1,4 @@
-1550047729a:1:{s:25:"magazin-fat-u-halimat.htm";a:11:{s:8:"fileName";s:25:"magazin-fat-u-halimat.htm";s:7:"content";s:3315:"title = "Фата мечты!"
+1550173429a:1:{s:25:"magazin-fat-u-halimat.htm";a:11:{s:8:"fileName";s:25:"magazin-fat-u-halimat.htm";s:7:"content";s:3782:"title = "Фата мечты!"
 url = "/"
 layout = "main_layout"
 description = "Здесь каждой невесте можно найти Фату Мечты!"
@@ -12,44 +12,64 @@ width = "auto"
 
 public function onInit() {
 	session_start();
-	$this->page->pics_chosen = json_encode($_SESSION['pics_chosen']);
+	//$this->page->pics_chosen = json_encode($_SESSION['pics_chosen']);
 }
 
 public function onUpdateChosenPics() {
-	return $_SESSION['pics_chosen'];
+	$return_arr=[];
+	if (isset($_SESSION['pics_chosen'])){
+		foreach ($_SESSION['pics_chosen'] as $key => $item){
+			foreach ($item as $url => $title){
+				$return_arr[] = $url;
+			}
+		}
+	}
+	return $return_arr;
 }
 
 public function onPicClick() {
 
 	$pic_url = post('pic_url');
+	$pic_title = post('pic_title');
+	$pic_description = post('pic_description');
 
+	//$_SESSION['pics_chosen'] =[];
 	$pics_chosen = $_SESSION['pics_chosen'];
+
+//die;
 
 	// Var for checking if deleting
 	$ifDeleting = false;
 	if (empty($pics_chosen)) {
 		echo '| array empty | Adding. ';
-		$pics_chosen[] = $pic_url;
+		$pics_chosen[] = [$pic_url => $pic_title];
 	} else { // $pics_chosen is _NOT_ empty
-		// Checking if pic.clicked is already in the array
+
 		echo '| Array is not empty ';
 		foreach ($pics_chosen as $key => $item) {
-			if ($item == $pic_url){
-				// We already have this picture in $pics_chosen = So we are deleting
-				array_splice($pics_chosen,$key,1);
-				$ifDeleting = true;
-				echo '| Deleting ';
-				break;
+			// Checking if pic.url is already in the array
+			foreach ($item as $url => $title) {
+				echo "\n".$key." => ".$url." => ".$title;
+				if ($url == $pic_url){
+					// We already have this picture in $pics_chosen = So we are deleting
+					array_splice($pics_chosen,$key,1);
+					$ifDeleting = true;
+					echo '| Deleting ';
+					break;
+				}
 			}
+
 		}
 		if ($ifDeleting == false) { // In that case we have to add element as well
+
 
 			if (count($pics_chosen) >= 3){
 				echo '| Array is full. ';
 				exit;
 			}
+
 			echo '| Adding. ';
-			$pics_chosen[] = $pic_url;
+			$pics_chosen[] = [$pic_url => $pic_title];
 		}
 	}
 
@@ -83,7 +103,14 @@ public function onPicClick() {
 	          {% for i, image in magnific.gallery.images %}
 							<div class="col-xs-6 col-sm-3">
 								<div class="picture-box thumb appearing-text-container">
-									<a href="{{ image.path }}" data-request="onPicClick" data-request-data="pic_url: '{{ image.path }}'">
+									<a href="{{ image.path }}"
+										data-request="onPicClick"
+										data-request-data="
+											pic_url: '{{ image.path }}',
+											pic_title: '{{ image.title }}',
+											pic_description: '{{ image.description }}'
+										"
+									>
 										<img class="img-thumbnail image-to-be-overlayed"
 												title="{{ image.title }}"
 												alt="{{ image.description }}"
@@ -106,7 +133,7 @@ public function onPicClick() {
 	    </div>
 	</div>
 </div>
-<div id="dumper"> {{ dump() }}</div>";s:5:"mtime";i:1549911148;s:6:"markup";s:1836:"<div class="jumbotron hidden-xs">
+<div id="dumper"> {{ dump() }}</div>";s:5:"mtime";i:1550143436;s:6:"markup";s:1942:"<div class="jumbotron hidden-xs">
 	<div class="container">
 		<div class="banner-container">
 			<img src="http://oct-veil-shop-fin/storage/app/uploads/public/5bd/f28/395/5bdf28395ca84989959861.jpg" />
@@ -128,7 +155,14 @@ public function onPicClick() {
 	          {% for i, image in magnific.gallery.images %}
 							<div class="col-xs-6 col-sm-3">
 								<div class="picture-box thumb appearing-text-container">
-									<a href="{{ image.path }}" data-request="onPicClick" data-request-data="pic_url: '{{ image.path }}'">
+									<a href="{{ image.path }}"
+										data-request="onPicClick"
+										data-request-data="
+											pic_url: '{{ image.path }}',
+											pic_title: '{{ image.title }}',
+											pic_description: '{{ image.description }}'
+										"
+									>
 										<img class="img-thumbnail image-to-be-overlayed"
 												title="{{ image.title }}"
 												alt="{{ image.description }}"
@@ -151,46 +185,66 @@ public function onPicClick() {
 	    </div>
 	</div>
 </div>
-<div id="dumper"> {{ dump() }}</div>";s:4:"code";s:1225:"public function onInit() {
+<div id="dumper"> {{ dump() }}</div>";s:4:"code";s:1601:"public function onInit() {
 	session_start();
-	$this->page->pics_chosen = json_encode($_SESSION['pics_chosen']);
+	//$this->page->pics_chosen = json_encode($_SESSION['pics_chosen']);
 }
 
 public function onUpdateChosenPics() {
-	return $_SESSION['pics_chosen'];
+	$return_arr=[];
+	if (isset($_SESSION['pics_chosen'])){
+		foreach ($_SESSION['pics_chosen'] as $key => $item){
+			foreach ($item as $url => $title){
+				$return_arr[] = $url;
+			}
+		}
+	}
+	return $return_arr;
 }
 
 public function onPicClick() {
 
 	$pic_url = post('pic_url');
+	$pic_title = post('pic_title');
+	$pic_description = post('pic_description');
 
+	//$_SESSION['pics_chosen'] =[];
 	$pics_chosen = $_SESSION['pics_chosen'];
+
+//die;
 
 	// Var for checking if deleting
 	$ifDeleting = false;
 	if (empty($pics_chosen)) {
 		echo '| array empty | Adding. ';
-		$pics_chosen[] = $pic_url;
+		$pics_chosen[] = [$pic_url => $pic_title];
 	} else { // $pics_chosen is _NOT_ empty
-		// Checking if pic.clicked is already in the array
+
 		echo '| Array is not empty ';
 		foreach ($pics_chosen as $key => $item) {
-			if ($item == $pic_url){
-				// We already have this picture in $pics_chosen = So we are deleting
-				array_splice($pics_chosen,$key,1);
-				$ifDeleting = true;
-				echo '| Deleting ';
-				break;
+			// Checking if pic.url is already in the array
+			foreach ($item as $url => $title) {
+				echo "\n".$key." => ".$url." => ".$title;
+				if ($url == $pic_url){
+					// We already have this picture in $pics_chosen = So we are deleting
+					array_splice($pics_chosen,$key,1);
+					$ifDeleting = true;
+					echo '| Deleting ';
+					break;
+				}
 			}
+
 		}
 		if ($ifDeleting == false) { // In that case we have to add element as well
+
 
 			if (count($pics_chosen) >= 3){
 				echo '| Array is full. ';
 				exit;
 			}
+
 			echo '| Adding. ';
-			$pics_chosen[] = $pic_url;
+			$pics_chosen[] = [$pic_url => $pic_title];
 		}
 	}
 

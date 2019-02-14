@@ -29,3 +29,7 @@ columns:
         type: text
         searchable: true
         sortable: false
+    chosen_pics:
+        label: chosen_pics
+        type: text
+        sortable: true

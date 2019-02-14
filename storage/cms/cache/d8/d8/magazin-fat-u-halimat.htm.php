@@ -1,46 +1,66 @@
 <?php 
-class Cms5c61c49c3067b441424052_056ce439a3ddc82dfb36fb3bd18aaf6fClass extends Cms\Classes\PageCode
+class Cms5c654fd174608347535293_35449d3e88faa08840006b2cdbb73502Class extends Cms\Classes\PageCode
 {
 public function onInit() {
 	session_start();
-	$this->page->pics_chosen = json_encode($_SESSION['pics_chosen']);
+	//$this->page->pics_chosen = json_encode($_SESSION['pics_chosen']);
 }
 
 public function onUpdateChosenPics() {
-	return $_SESSION['pics_chosen'];
+	$return_arr=[];
+	if (isset($_SESSION['pics_chosen'])){
+		foreach ($_SESSION['pics_chosen'] as $key => $item){
+			foreach ($item as $url => $title){
+				$return_arr[] = $url;
+			}
+		}
+	}
+	return $return_arr;
 }
 
 public function onPicClick() {
 
 	$pic_url = post('pic_url');
+	$pic_title = post('pic_title');
+	$pic_description = post('pic_description');
 
+	//$_SESSION['pics_chosen'] =[];
 	$pics_chosen = $_SESSION['pics_chosen'];
+
+//die;
 
 	// Var for checking if deleting
 	$ifDeleting = false;
 	if (empty($pics_chosen)) {
 		echo '| array empty | Adding. ';
-		$pics_chosen[] = $pic_url;
+		$pics_chosen[] = [$pic_url => $pic_title];
 	} else { // $pics_chosen is _NOT_ empty
-		// Checking if pic.clicked is already in the array
+
 		echo '| Array is not empty ';
 		foreach ($pics_chosen as $key => $item) {
-			if ($item == $pic_url){
-				// We already have this picture in $pics_chosen = So we are deleting
-				array_splice($pics_chosen,$key,1);
-				$ifDeleting = true;
-				echo '| Deleting ';
-				break;
+			// Checking if pic.url is already in the array
+			foreach ($item as $url => $title) {
+				echo "\n".$key." => ".$url." => ".$title;
+				if ($url == $pic_url){
+					// We already have this picture in $pics_chosen = So we are deleting
+					array_splice($pics_chosen,$key,1);
+					$ifDeleting = true;
+					echo '| Deleting ';
+					break;
+				}
 			}
+
 		}
 		if ($ifDeleting == false) { // In that case we have to add element as well
+
 
 			if (count($pics_chosen) >= 3){
 				echo '| Array is full. ';
 				exit;
 			}
+
 			echo '| Adding. ';
-			$pics_chosen[] = $pic_url;
+			$pics_chosen[] = [$pic_url => $pic_title];
 		}
 	}
 

@@ -1,9 +1,10 @@
-1550047729a:1:{s:15:"main_layout.htm";a:6:{s:8:"fileName";s:15:"main_layout.htm";s:7:"content";s:1578:"description = "Main Layout for Vail-Shop"
+1550173429a:1:{s:15:"main_layout.htm";a:6:{s:8:"fileName";s:15:"main_layout.htm";s:7:"content";s:1580:"description = "Main Layout for Vail-Shop"
 ==
 <!DOCTYPE html>
 <html>
     <head>
         <meta charset="utf-8">
+
         <title>{{ this.page.title }}</title>
         <meta name="description" content="{{ this.page.meta_description }}">
         <meta name="title" content="{{ this.page.meta_title }}">
@@ -42,10 +43,11 @@
         {% scripts %}
     </div>
     </body>
-</html>";s:5:"mtime";i:1549974724;s:6:"markup";s:1531:"<!DOCTYPE html>
+</html>";s:5:"mtime";i:1550133131;s:6:"markup";s:1533:"<!DOCTYPE html>
 <html>
     <head>
         <meta charset="utf-8">
+
         <title>{{ this.page.title }}</title>
         <meta name="description" content="{{ this.page.meta_description }}">
         <meta name="title" content="{{ this.page.meta_title }}">

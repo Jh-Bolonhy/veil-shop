@@ -47,7 +47,6 @@ class Orderform extends ComponentBase
 	    $this -> addCss(CombineAssets::combine($css, plugins_path() . '\leonidmuzyka\clients'));
 			$this->page ['plugins_path'] = plugins_path();
 
-			session_start();
 			$this->loadSessionVars();
 
     }
@@ -65,12 +64,13 @@ class Orderform extends ComponentBase
 	        "phone_test" => post('phone_test'),
 				],
         [
-	        "commentary" => 'min:6|regex: /^[\pL\pM\pN_ .,;:!?-]+$/u',
+	        "commentary" => 'required|min:2|regex: /^[\pL\pM\pN_ .,;:!?-]+$/u',
           "name" => 'required|min:3|regex: /^[\pL\pM -]+$/u',
 	        "phone_test" => 'required|min:14|regex: /^[\pM\pN ()-]+$/u',
         ],
 	      [
-	      	'commentary.min' => 'Комментарий должен быть больше 6-ти символов',
+	      	'commentary.required' => 'Пожалуйста напишите пару слов',
+	      	'commentary.min' => 'Комментарий должен быть больше 2-х символов',
 	      	'commentary.regex' => 'Допускаются буквы, цифры и знаки препинания ( , . ; : ! ? - ). Приносим извинения за неудобства',
 		      'name.required' => 'Подскажите, как к Вам обращаться',
 		      'name.min' => 'Имя от :min букв',
@@ -89,8 +89,20 @@ class Orderform extends ComponentBase
       }
 
 		/**
-		 *  Преорбазование phone_test'a к виду интежера
+		 *  Преобразование выбранных картинок из сессии в стринг для сохранения
 		 */
+			session_start();
+			$chosen_pics_str = '';
+			$only_title_arr=[];
+			if (isset($_SESSION['pics_chosen'])){
+				foreach ($_SESSION['pics_chosen'] as $key => $item){
+					foreach ($item as $url => $title){
+						$only_title_arr[] = $title;
+					}
+				}
+			}
+			$chosen_pics_str = implode(' || ',$only_title_arr);
+
 
 
 			/**
@@ -100,6 +112,7 @@ class Orderform extends ComponentBase
 			$clients->client_commentary = post('commentary');
 			$clients->name = post('name');
       $clients->phone = post('phone_test');
+      $clients->chosen_pics = $chosen_pics_str;
       $clients->save();
 
       $this->page['flashMsg'] = [
@@ -110,6 +123,7 @@ class Orderform extends ComponentBase
                 "commentary" => post('commentary'),
       	        "name" => post('name'),
       	        "phone_test" => post('phone_test'),
+	              "chosen_pics" => implode(' || ',$only_title_arr),
       				];
 			Redirect::back()->withInput();
     }
@@ -118,10 +132,28 @@ class Orderform extends ComponentBase
 
 	public function onUpdateChosenPics() {
 		session_start();
-		return $_SESSION['pics_chosen'];
+		$return_arr=[];
+		if (isset($_SESSION['pics_chosen'])){
+			foreach ($_SESSION['pics_chosen'] as $key => $item){
+				foreach ($item as $url => $title){
+					$return_arr[] = $url;
+				}
+			}
+		}
+		return $return_arr;
 	}
 
 	private function loadSessionVars() {
-		$this->page ['pics_chosen'] = $_SESSION['pics_chosen'];
+		session_start();
+
+		$return_arr=[];
+		if (isset($_SESSION['pics_chosen'])){
+			foreach ($_SESSION['pics_chosen'] as $key => $item){
+				foreach ($item as $url => $title){
+					$return_arr[] = $url;
+				}
+			}
+		}
+		$this->page ['pics_chosen'] = $return_arr;
 	}
 }

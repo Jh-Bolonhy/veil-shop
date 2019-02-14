@@ -10,8 +10,9 @@
         'client_commentary' => 'Комментарий клиента',
         'manage_contacts' => 'Управление контактами',
         'contacts' => 'Контакты',
+        'chosen_pics' => 'Выбранные модели',
     ],
-		'validation' => [
-			'name.required' => 'Пожалуйста, введите Ваше Имя.',
-		]
+    'validation' => [
+        'name.required' => 'Пожалуйста, введите Ваше Имя.',
+    ],
 ];

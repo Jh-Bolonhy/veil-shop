@@ -73,4 +73,5 @@
   'RainLab\\Builder\\FormWidgets\\ControllerBuilder' => 'plugins\\rainlab\\builder\\formwidgets\\ControllerBuilder.php',
   'RainLab\\Builder\\Classes\\BehaviorDesignTimeProviderBase' => 'plugins\\rainlab\\builder\\classes\\BehaviorDesignTimeProviderBase.php',
   'RainLab\\Builder\\Widgets\\DefaultBehaviorDesignTimeProvider' => 'plugins\\rainlab\\builder\\widgets\\DefaultBehaviorDesignTimeProvider.php',
+  'RainLab\\Builder\\Classes\\LanguageMixer' => 'plugins\\rainlab\\builder\\classes\\LanguageMixer.php',
 );

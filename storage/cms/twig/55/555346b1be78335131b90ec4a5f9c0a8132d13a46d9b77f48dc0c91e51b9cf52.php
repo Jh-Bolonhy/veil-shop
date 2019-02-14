@@ -53,28 +53,42 @@ class __TwigTemplate_562111ae0a68379055cb2ab34bdc7a82edca4a3696917636bf02e133634
 \t\t\t\t\t\t\t\t\t<a href=\"";
             // line 23
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["image"], "path", array()), "html", null, true);
-            echo "\" data-request=\"onPicClick\" data-request-data=\"pic_url: '";
+            echo "\"
+\t\t\t\t\t\t\t\t\t\tdata-request=\"onPicClick\"
+\t\t\t\t\t\t\t\t\t\tdata-request-data=\"
+\t\t\t\t\t\t\t\t\t\t\tpic_url: '";
+            // line 26
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["image"], "path", array()), "html", null, true);
-            echo "'\">
+            echo "',
+\t\t\t\t\t\t\t\t\t\t\tpic_title: '";
+            // line 27
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["image"], "title", array()), "html", null, true);
+            echo "',
+\t\t\t\t\t\t\t\t\t\t\tpic_description: '";
+            // line 28
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["image"], "description", array()), "html", null, true);
+            echo "'
+\t\t\t\t\t\t\t\t\t\t\"
+\t\t\t\t\t\t\t\t\t>
 \t\t\t\t\t\t\t\t\t\t<img class=\"img-thumbnail image-to-be-overlayed\"
 \t\t\t\t\t\t\t\t\t\t\t\ttitle=\"";
-            // line 25
+            // line 32
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["image"], "title", array()), "html", null, true);
             echo "\"
 \t\t\t\t\t\t\t\t\t\t\t\talt=\"";
-            // line 26
+            // line 33
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["image"], "description", array()), "html", null, true);
             echo "\"
 \t\t\t\t\t\t\t\t\t\t\t\tsrc=\"";
-            // line 27
+            // line 34
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["image"], "thumb", array(0 => ($context["width"] ?? null), 1 => ($context["height"] ?? null)), "method"), "html", null, true);
             echo "\"
 \t\t\t\t\t\t\t\t\t\t\t\twidth=\"";
-            // line 28
+            // line 35
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, ($context["magnific"] ?? null), "property", array(0 => "width"), "method"), "html", null, true);
             echo "\"
 \t\t\t\t\t\t\t\t\t\t\t\theight=\"";
-            // line 29
+            // line 36
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, ($context["magnific"] ?? null), "property", array(0 => "height"), "method"), "html", null, true);
             echo "\"
 \t\t\t\t\t\t\t\t\t\t/>
@@ -93,13 +107,13 @@ class __TwigTemplate_562111ae0a68379055cb2ab34bdc7a82edca4a3696917636bf02e133634
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['i'], $context['image'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 42
+        // line 49
         echo "\t        </div>
 \t    </div>
 \t</div>
 </div>
 <div id=\"dumper\"> ";
-        // line 46
+        // line 53
         echo $this->extensions['Cms\Twig\DebugExtension']->runDump($this->env, $context);
         echo "</div>";
     }
@@ -116,7 +130,7 @@ class __TwigTemplate_562111ae0a68379055cb2ab34bdc7a82edca4a3696917636bf02e133634
 
     public function getDebugInfo()
     {
-        return array (  103 => 46,  97 => 42,  78 => 29,  74 => 28,  70 => 27,  66 => 26,  62 => 25,  55 => 23,  51 => 21,  47 => 20,  41 => 17,  23 => 1,);
+        return array (  117 => 53,  111 => 49,  92 => 36,  88 => 35,  84 => 34,  80 => 33,  76 => 32,  69 => 28,  65 => 27,  61 => 26,  55 => 23,  51 => 21,  47 => 20,  41 => 17,  23 => 1,);
     }
 
     public function getSourceContext()
@@ -143,7 +157,14 @@ class __TwigTemplate_562111ae0a68379055cb2ab34bdc7a82edca4a3696917636bf02e133634
 \t          {% for i, image in magnific.gallery.images %}
 \t\t\t\t\t\t\t<div class=\"col-xs-6 col-sm-3\">
 \t\t\t\t\t\t\t\t<div class=\"picture-box thumb appearing-text-container\">
-\t\t\t\t\t\t\t\t\t<a href=\"{{ image.path }}\" data-request=\"onPicClick\" data-request-data=\"pic_url: '{{ image.path }}'\">
+\t\t\t\t\t\t\t\t\t<a href=\"{{ image.path }}\"
+\t\t\t\t\t\t\t\t\t\tdata-request=\"onPicClick\"
+\t\t\t\t\t\t\t\t\t\tdata-request-data=\"
+\t\t\t\t\t\t\t\t\t\t\tpic_url: '{{ image.path }}',
+\t\t\t\t\t\t\t\t\t\t\tpic_title: '{{ image.title }}',
+\t\t\t\t\t\t\t\t\t\t\tpic_description: '{{ image.description }}'
+\t\t\t\t\t\t\t\t\t\t\"
+\t\t\t\t\t\t\t\t\t>
 \t\t\t\t\t\t\t\t\t\t<img class=\"img-thumbnail image-to-be-overlayed\"
 \t\t\t\t\t\t\t\t\t\t\t\ttitle=\"{{ image.title }}\"
 \t\t\t\t\t\t\t\t\t\t\t\talt=\"{{ image.description }}\"

@@ -18,3 +18,7 @@ fields:
         size: large
         span: full
         type: textarea
+    chosen_pics:
+        label: 'leonidmuzyka.clients::lang.clients.chosen_pics'
+        span: full
+        type: text
