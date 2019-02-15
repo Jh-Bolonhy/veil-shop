@@ -361,10 +361,7 @@ img.mfp-img {
 	  font-size: 28px;
 	  padding: 10px 10px;
 	}
-	.rounded-span {
-	  border-radius: 100px;
-		border: 2px solid #A88777;
-	}
+
 	.appeared {
 		opacity: 1;
 	}

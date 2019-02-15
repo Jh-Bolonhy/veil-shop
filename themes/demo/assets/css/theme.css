@@ -522,6 +522,58 @@ html,body {
 #layout-footer {
   flex: 0 0 auto;
 }
+
+/* ================= Хэдэр ==================== */
+
+.with-transitions {
+	-webkit-transition: all 0.5s linear !important;
+  -moz-transition: all 0.5s linear !important;
+  -o-transition: all 0.5s linear !important;
+  transition: all 0.5s linear !important;
+}
+.heart-span {
+	position:relative;
+	font-size: 50px;
+	color: #A88777;
+}
+.heart-counter {
+	display: none;
+	position:absolute;
+  z-index:3;
+	margin: 0px 11px;
+  font-size: small;
+  font-weight: bold;
+	color: #A88777;
+}
+.has-numbers {
+	color: floralwhite;
+}
+.span-appeared {
+	display: inline-block;
+}
+.span-disappeared {
+	display: none;
+}
+
+.glow {
+  color: #56a56d !important;
+	font-weight: bold;
+  text-align: center;
+  -webkit-animation: glow 1s ease-in-out infinite alternate;
+  -moz-animation: glow 1s ease-in-out infinite alternate;
+  animation: glow 1s ease-in-out infinite alternate;
+}
+
+@-webkit-keyframes glow {
+  from {
+    text-shadow:  0 0 0px #c9e8d2, 0 0 5px #c9e8d2, 0 0 10px #7ec191, 0 0 15px #7ec191, 0 0 20px #7ec191;
+  }
+  to {
+    text-shadow: 0 0 5px #c9e8d2, 0 0 10px #c9e8d2, 0 0 15px #7ec191, 0 0 20px #7ec191, 0 0 25px #7ec191;
+  }
+}
+
+/* ================= Форма ==================== */
 textarea {
     resize: none;
 }
@@ -539,6 +591,7 @@ span#toggle-navigation-btn .icon-bar {
 }
 li.active-page > a {
 	color: saddlebrown !important;
+	font-weight: bold;
 }
 
 /* Далее все медиа классы */
