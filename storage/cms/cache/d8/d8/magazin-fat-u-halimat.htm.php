@@ -1,8 +1,10 @@
 <?php 
-class Cms5c654fd174608347535293_35449d3e88faa08840006b2cdbb73502Class extends Cms\Classes\PageCode
+class Cms5c67fbd958355692883617_2130e6f9dd12b5b71ce918e35f6d2939Class extends Cms\Classes\PageCode
 {
 public function onInit() {
-	session_start();
+	if (session_status() == PHP_SESSION_NONE) {
+	    session_start();
+	}
 	//$this->page->pics_chosen = json_encode($_SESSION['pics_chosen']);
 }
 

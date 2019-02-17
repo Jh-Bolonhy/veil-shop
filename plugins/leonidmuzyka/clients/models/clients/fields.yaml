@@ -22,3 +22,16 @@ fields:
         label: 'leonidmuzyka.clients::lang.clients.chosen_pics'
         span: full
         type: text
+    type:
+        label: 'leonidmuzyka.clients::lang.clients.type'
+        span: auto
+        options:
+            - Отзыв(Перезвонить)
+            - Заказ(Перезвонить)
+            - Обмерить
+            - Изготовить
+            - Доставить
+            - Довольный
+            - Недовольный(Звонить)
+            - Отказавшийся
+        type: dropdown

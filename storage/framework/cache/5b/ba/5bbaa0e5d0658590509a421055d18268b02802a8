@@ -1,4 +1,4 @@
-1550173429a:1:{s:25:"magazin-fat-u-halimat.htm";a:11:{s:8:"fileName";s:25:"magazin-fat-u-halimat.htm";s:7:"content";s:3782:"title = "Фата мечты!"
+1550395816a:1:{s:25:"magazin-fat-u-halimat.htm";a:11:{s:8:"fileName";s:25:"magazin-fat-u-halimat.htm";s:7:"content";s:4008:"title = "Фата мечты!"
 url = "/"
 layout = "main_layout"
 description = "Здесь каждой невесте можно найти Фату Мечты!"
@@ -9,9 +9,11 @@ idGallery = 1
 height = 400
 width = "auto"
 ==
-
+<?php
 public function onInit() {
-	session_start();
+	if (session_status() == PHP_SESSION_NONE) {
+	    session_start();
+	}
 	//$this->page->pics_chosen = json_encode($_SESSION['pics_chosen']);
 }
 
@@ -79,7 +81,7 @@ public function onPicClick() {
 	echo "\n";
 	exit;
 }
-
+?>
 ==
 <div class="jumbotron hidden-xs">
 	<div class="container">
@@ -133,7 +135,11 @@ public function onPicClick() {
 	    </div>
 	</div>
 </div>
-<div id="dumper"> {{ dump() }}</div>";s:5:"mtime";i:1550143436;s:6:"markup";s:1942:"<div class="jumbotron hidden-xs">
+
+
+{% if 0 %}
+	<div id="dumper"> {{ dump() }}</div>
+{% endif %}";s:5:"mtime";i:1550318541;s:6:"markup";s:2024:"<div class="jumbotron hidden-xs">
 	<div class="container">
 		<div class="banner-container">
 			<img src="http://oct-veil-shop-fin/storage/app/uploads/public/5bd/f28/395/5bdf28395ca84989959861.jpg" />
@@ -185,8 +191,14 @@ public function onPicClick() {
 	    </div>
 	</div>
 </div>
-<div id="dumper"> {{ dump() }}</div>";s:4:"code";s:1601:"public function onInit() {
-	session_start();
+
+
+{% if 0 %}
+	<div id="dumper"> {{ dump() }}</div>
+{% endif %}";s:4:"code";s:1723:"public function onInit() {
+	if (session_status() == PHP_SESSION_NONE) {
+	    session_start();
+	}
 	//$this->page->pics_chosen = json_encode($_SESSION['pics_chosen']);
 }
 

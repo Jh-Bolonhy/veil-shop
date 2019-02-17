@@ -1,0 +1,114 @@
+title = "Обратная связь"
+url = "/obratnaya-svyaz"
+layout = "main_layout"
+description = "Страница для вопросов и предложений"
+is_hidden = 0
+
+[Orderform]
+==
+<div class="container">
+
+  <div class="col-sm-7 text-justify">
+    <h1> Вопросы и предложения </h1>
+
+
+		<div id="divForAnyFlash1">
+			{% partial Orderform ~ '::_flash' %}
+		</div>
+		<div class="jumbotron">
+
+		<form
+			data-request="{{ Orderform }}::onAddOrder"
+		  data-request-update="
+		       '{{ Orderform }}::_flash' : '#divForAnyFlash1'
+		    ,  '{{ Orderform }}::_dumper' : '#info'
+			"
+			action="#contact-form1"
+			id="contact-form1"
+		>
+
+			<div class="form-group row">
+			    <label for="inputComment1" class="col-sm-2 col-form-label"> Вопрос </label>
+			    <div class="col-sm-10">
+				    <textarea
+					    name="commentary1"
+					    class="form-control size-large"
+					    id="inputComment1"
+					    rows="2"
+					    placeholder="Задайте Ваш вопрос"
+				    >{{ form_value('commentary1') }}</textarea>
+			    </div>
+
+					{% if (errors.has('commentary1')) %}
+								<div class="col-sm-2"></div>
+						    <div class=" col-sm-10">
+						        <small class="error-message">{{ errors.first('commentary1') }}</small>
+						    </div>
+						{% endif %}
+		  </div>
+			<div class="form-group row">
+			    <label for="inputName1" class="col-sm-2 col-form-label">Имя</label>
+			    <div class="col-sm-10">
+			      <input
+				      name="name1"
+				      type="name"
+				      class="form-control"
+				      id="inputName1"
+				      placeholder="Как к Вам обращаться?"
+				      value="{{ form_value('name1') }}"
+			      />
+			    </div>
+
+				{% if (errors.has('name1')) %}
+						<div class="col-sm-2"></div>
+				    <div class=" col-sm-10">
+				        <small class="error-message">{{ errors.first('name1') }}</small>
+				    </div>
+				{% endif %}
+		  </div>
+
+			<div class="form-group row">
+				<label for="telephone1" class="col-sm-2 col-form-label ">Телефон</label>
+				<div class="col-sm-10">
+				<input id="telephone1"
+					type="tel"
+					name="phone_test1"
+					mask-pattern="(XXX) XXX XXXX"
+					pattern="\(\d{3}\) \d{3}\ \d{4}"
+					class="form-control masked"
+					title="10-digit number"
+					placeholder="Введите удобный контактный телефон"
+					value="{{ form_value('phone_test1') }}"
+				/>
+				</div>
+				{% if (errors.has('phone_test1')) %}
+					          <div class="col-sm-2"></div>
+					          <div class=" col-sm-10">
+					              <small class="error-message">{{ errors.first('phone_test1') }}</small>
+					          </div>
+					      {% endif %}
+		  </div>
+			<input type="hidden" name="action" value="from-footer">
+		  <div class="form-group row">
+		    <div class="col-sm-10">
+		      <button type="submit" class="btn btn-primary" data-attach-loading>Отправляем!</button>
+		    </div>
+		  </div>
+
+
+
+		</form>
+
+			{% put scripts %}
+				<script src="http://oct-veil-shop-fin/plugins/leonidmuzyka/clients/assets/js/masking-input.js" data-autoinit="true"></script>
+			{% endput %}
+
+			{% if 0 %}
+			<div class="container" id="info">
+		    {% partial Orderform ~ '::_dumper' for_dump=Orderform.for_dump %}
+		  </div>
+			{% endif %}
+		</div>
+  </div>
+
+</div>

@@ -33,3 +33,8 @@ columns:
         label: chosen_pics
         type: text
         sortable: true
+    type:
+        label: Тип
+        type: text
+        searchable: true
+        sortable: true

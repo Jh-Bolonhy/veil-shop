@@ -9,9 +9,11 @@ idGallery = 1
 height = 400
 width = "auto"
 ==
-
+<?php
 public function onInit() {
-	session_start();
+	if (session_status() == PHP_SESSION_NONE) {
+	    session_start();
+	}
 	//$this->page->pics_chosen = json_encode($_SESSION['pics_chosen']);
 }
 
@@ -79,7 +81,7 @@ public function onPicClick() {
 	echo "\n";
 	exit;
 }
-
+?>
 ==
 <div class="jumbotron hidden-xs">
 	<div class="container">
@@ -133,4 +135,8 @@ public function onPicClick() {
 	    </div>
 	</div>
 </div>
-<div id="dumper"> {{ dump() }}</div>
+
+
+{% if 0 %}
+	<div id="dumper"> {{ dump() }}</div>
+{% endif %}

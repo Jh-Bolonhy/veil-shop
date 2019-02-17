@@ -112,10 +112,17 @@ class __TwigTemplate_562111ae0a68379055cb2ab34bdc7a82edca4a3696917636bf02e133634
 \t    </div>
 \t</div>
 </div>
-<div id=\"dumper\"> ";
-        // line 53
-        echo $this->extensions['Cms\Twig\DebugExtension']->runDump($this->env, $context);
-        echo "</div>";
+
+
+";
+        // line 55
+        if (0) {
+            // line 56
+            echo "\t<div id=\"dumper\"> ";
+            echo $this->extensions['Cms\Twig\DebugExtension']->runDump($this->env, $context);
+            echo "</div>
+";
+        }
     }
 
     public function getTemplateName()
@@ -130,7 +137,7 @@ class __TwigTemplate_562111ae0a68379055cb2ab34bdc7a82edca4a3696917636bf02e133634
 
     public function getDebugInfo()
     {
-        return array (  117 => 53,  111 => 49,  92 => 36,  88 => 35,  84 => 34,  80 => 33,  76 => 32,  69 => 28,  65 => 27,  61 => 26,  55 => 23,  51 => 21,  47 => 20,  41 => 17,  23 => 1,);
+        return array (  121 => 56,  119 => 55,  111 => 49,  92 => 36,  88 => 35,  84 => 34,  80 => 33,  76 => 32,  69 => 28,  65 => 27,  61 => 26,  55 => 23,  51 => 21,  47 => 20,  41 => 17,  23 => 1,);
     }
 
     public function getSourceContext()
@@ -187,6 +194,10 @@ class __TwigTemplate_562111ae0a68379055cb2ab34bdc7a82edca4a3696917636bf02e133634
 \t    </div>
 \t</div>
 </div>
-<div id=\"dumper\"> {{ dump() }}</div>", "E:\\xampp\\htdocs\\oct-veil-shop-fin/themes/demo/pages/magazin-fat-u-halimat.htm", "");
+
+
+{% if 0 %}
+\t<div id=\"dumper\"> {{ dump() }}</div>
+{% endif %}", "E:\\xampp\\htdocs\\oct-veil-shop-fin/themes/demo/pages/magazin-fat-u-halimat.htm", "");
     }
 }

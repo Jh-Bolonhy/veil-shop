@@ -4,7 +4,7 @@
         <div class="container">
 	        <hr>
 	        <div class="row">
-		        <div class="col-sm-3"></div>
+		        <div class="col-sm-2"></div>
 
 		        <div class="col-sm-3">
 
@@ -19,16 +19,108 @@
 			        <p> Иконки социальных сетей </p>
 
             </div>
-		        <div class="col-sm-5 text-justify">
+
+		        <div class="col-sm-7 text-justify">
 			        <p class="footer-header"> <b>У Вас остались вопросы? - Задайте их нам!</b></p>
-							<form action="">
-								<label> Введите Ваш вопрос: </label> <br>
-								<input type="text"/>  <br>
-								<label> Как к Вам обращаться? </label> <br>
-								<input type="text"/>
-<br>
-								<button type="submit"> Отпрвить вопрос </button>
+			             
+			                 
+							<div id="divForAnyFlash1">
+								{% partial Orderform ~ '::_flash' %}
+							</div>
+							<div class="jumbotron">
+
+							<form
+								data-request="{{ Orderform }}::onAddOrder"
+							  data-request-update="
+							       '{{ Orderform }}::_flash' : '#divForAnyFlash1'
+							    ,  '{{ Orderform }}::_dumper' : '#info'
+								"
+								action="#contact-form1"
+								id="contact-form1"
+							>
+
+								<div class="form-group row">
+								    <label for="inputComment1" class="col-sm-2 col-form-label footer-form-label">Комментарий</label>
+								    <div class="col-sm-10">
+									    <textarea
+										    name="commentary1"
+										    class="form-control size-large"
+										    id="inputComment1"
+										    rows="2"
+										    placeholder="Задайте Ваш вопрос"
+									    >{{ form_value('commentary1') }}</textarea>
+								    </div>
+
+										{% if (errors.has('commentary1')) %}
+													<div class="col-sm-2"></div>
+											    <div class=" col-sm-10">
+											        <small class="error-message">{{ errors.first('commentary1') }}</small>
+											    </div>
+											{% endif %}
+							  </div>
+								<div class="form-group row">
+								    <label for="inputName1" class="col-sm-2 col-form-label footer-form-label">Имя</label>
+								    <div class="col-sm-10">
+								      <input
+									      name="name1"
+									      type="name"
+									      class="form-control"
+									      id="inputName1"
+									      placeholder="Как к Вам обращаться?"
+									      value="{{ form_value('name1') }}"
+								      />
+								    </div>
+
+									{% if (errors.has('name1')) %}
+											<div class="col-sm-2"></div>
+									    <div class=" col-sm-10">
+									        <small class="error-message">{{ errors.first('name1') }}</small>
+									    </div>
+									{% endif %}
+							  </div>
+
+								<div class="form-group row">
+									<label for="telephone1" class="col-sm-2 col-form-label footer-form-label">Телефон</label>
+									<div class="col-sm-10">
+									<input id="telephone1"
+										type="tel"
+										name="phone_test1"
+										mask-pattern="(XXX) XXX XXXX"
+										pattern="\(\d{3}\) \d{3}\ \d{4}"
+										class="form-control masked"
+										title="10-digit number"
+										placeholder="Введите удобный контактный телефон"
+										value="{{ form_value('phone_test1') }}"
+									/>
+									</div>
+									{% if (errors.has('phone_test1')) %}
+										          <div class="col-sm-2"></div>
+										          <div class=" col-sm-10">
+										              <small class="error-message">{{ errors.first('phone_test1') }}</small>
+										          </div>
+										      {% endif %}
+							  </div>
+								<input type="hidden" name="action" value="from-footer">
+							  <div class="form-group row">
+							    <div class="col-sm-10">
+							      <button type="submit" class="btn btn-primary" data-attach-loading>Отправляем!</button>
+							    </div>
+							  </div>
+
+
+
 							</form>
+
+								{% put scripts %}
+									<script src="http://oct-veil-shop-fin/plugins/leonidmuzyka/clients/assets/js/masking-input.js" data-autoinit="true"></script>
+								{% endput %}
+
+								{% if 0 %}
+								<div class="container" id="info">
+							    {% partial Orderform ~ '::_dumper' for_dump=Orderform.for_dump %}
+							  </div>
+								{% endif %}
+							</div>
 		        </div>
 		        <div class="col-sm-3"></div>
 	        </div>
@@ -37,4 +129,5 @@
 	        </div>
         </div>
     </div>
+		<div>{{ this.page.redirected }} </div>
 </div>

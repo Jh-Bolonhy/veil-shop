@@ -1,4 +1,4 @@
-1550173442a:1:{s:15:"site/header.htm";a:6:{s:8:"fileName";s:15:"site/header.htm";s:7:"content";s:1912:"==
+1550395835a:1:{s:15:"site/header.htm";a:6:{s:8:"fileName";s:15:"site/header.htm";s:7:"content";s:2133:"==
 <!-- Nav -->
 <nav id="layout-nav" class="navbar-pink navbar navbar-default navbar-fixed-top " role="navigation" >
     <div class="container">
@@ -20,15 +20,22 @@
 	            <li class="dot-razdelitel"></li>
               <li class="{% if this.page.id == 'plugins' %}active-page{% endif %}"><a href="{{ 'plugins'|page }}">О нас</a></li>
 	            <li class="separator v-razdelitel"></li>
-	            <li class="nav-item"><a class="navbar-link"><span class="rounded-span"> &nbsp&#10084;&nbsp</span> <span class="rounded-span"> &nbsp 3 &nbsp </span></a></li>
+	            <li class="nav-item"><a class="navbar-link">
+		            <span class="with-transitions heart-counter">                  &nbsp 3 &nbsp     </span>
+		            <span class="with-transitions heart-span">                     &#9825; </span>
+	            </a></li>
 	            <li class="separator v-razdelitel"></li>
-	            <li class="nav-item {% if this.page.id == 'testovaya-forma' %}active-page{% endif %}"><a class="navbar-link" href="{{ 'testovaya-forma'|page }}">Получить консультацию</a></li>
+	            <li class="nav-item {% if this.page.id == 'testovaya-forma' %}active-page{% endif %}">
+		            <a class="navbar-link consult-link with-transitions" href="{{ 'testovaya-forma'|page }}">
+			            <strong>Получите консультацию</strong>
+		            </a>
+	            </li>
 
             </ul>
         </div>
     </div>
 </nav>
-";s:5:"mtime";i:1549974724;s:6:"markup";s:1906:"<!-- Nav -->
+";s:5:"mtime";i:1550235837;s:6:"markup";s:2127:"<!-- Nav -->
 <nav id="layout-nav" class="navbar-pink navbar navbar-default navbar-fixed-top " role="navigation" >
     <div class="container">
         <div class="navbar-header">
@@ -49,9 +56,16 @@
 	            <li class="dot-razdelitel"></li>
               <li class="{% if this.page.id == 'plugins' %}active-page{% endif %}"><a href="{{ 'plugins'|page }}">О нас</a></li>
 	            <li class="separator v-razdelitel"></li>
-	            <li class="nav-item"><a class="navbar-link"><span class="rounded-span"> &nbsp&#10084;&nbsp</span> <span class="rounded-span"> &nbsp 3 &nbsp </span></a></li>
+	            <li class="nav-item"><a class="navbar-link">
+		            <span class="with-transitions heart-counter">                  &nbsp 3 &nbsp     </span>
+		            <span class="with-transitions heart-span">                     &#9825; </span>
+	            </a></li>
 	            <li class="separator v-razdelitel"></li>
-	            <li class="nav-item {% if this.page.id == 'testovaya-forma' %}active-page{% endif %}"><a class="navbar-link" href="{{ 'testovaya-forma'|page }}">Получить консультацию</a></li>
+	            <li class="nav-item {% if this.page.id == 'testovaya-forma' %}active-page{% endif %}">
+		            <a class="navbar-link consult-link with-transitions" href="{{ 'testovaya-forma'|page }}">
+			            <strong>Получите консультацию</strong>
+		            </a>
+	            </li>
 
             </ul>
         </div>

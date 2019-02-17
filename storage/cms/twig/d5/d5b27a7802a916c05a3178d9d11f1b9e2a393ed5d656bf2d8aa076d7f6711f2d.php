@@ -65,16 +65,24 @@ class __TwigTemplate_ddb60f9a96e26c997c30f1fe10e1f1e743756220187b81261366e00d223
         echo $this->extensions['Cms\Twig\Extension']->pageFilter("plugins");
         echo "\">О нас</a></li>
 \t            <li class=\"separator v-razdelitel\"></li>
-\t            <li class=\"nav-item\"><a class=\"navbar-link\"><span class=\"rounded-span\"> &nbsp&#10084;&nbsp</span> <span class=\"rounded-span\"> &nbsp 3 &nbsp </span></a></li>
+\t            <li class=\"nav-item\"><a class=\"navbar-link\">
+\t\t            <span class=\"with-transitions heart-counter\">                  &nbsp 3 &nbsp     </span>
+\t\t            <span class=\"with-transitions heart-span\">                     &#9825; </span>
+\t            </a></li>
 \t            <li class=\"separator v-razdelitel\"></li>
 \t            <li class=\"nav-item ";
-        // line 24
+        // line 27
         if ((twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, ($context["this"] ?? null), "page", array()), "id", array()) == "testovaya-forma")) {
             echo "active-page";
         }
-        echo "\"><a class=\"navbar-link\" href=\"";
+        echo "\">
+\t\t            <a class=\"navbar-link consult-link with-transitions\" href=\"";
+        // line 28
         echo $this->extensions['Cms\Twig\Extension']->pageFilter("testovaya-forma");
-        echo "\">Получить консультацию</a></li>
+        echo "\">
+\t\t\t            <strong>Получите консультацию</strong>
+\t\t            </a>
+\t            </li>
 
             </ul>
         </div>
@@ -94,7 +102,7 @@ class __TwigTemplate_ddb60f9a96e26c997c30f1fe10e1f1e743756220187b81261366e00d223
 
     public function getDebugInfo()
     {
-        return array (  72 => 24,  61 => 20,  52 => 18,  43 => 16,  35 => 11,  23 => 1,);
+        return array (  81 => 28,  75 => 27,  61 => 20,  52 => 18,  43 => 16,  35 => 11,  23 => 1,);
     }
 
     public function getSourceContext()
@@ -120,9 +128,16 @@ class __TwigTemplate_ddb60f9a96e26c997c30f1fe10e1f1e743756220187b81261366e00d223
 \t            <li class=\"dot-razdelitel\"></li>
               <li class=\"{% if this.page.id == 'plugins' %}active-page{% endif %}\"><a href=\"{{ 'plugins'|page }}\">О нас</a></li>
 \t            <li class=\"separator v-razdelitel\"></li>
-\t            <li class=\"nav-item\"><a class=\"navbar-link\"><span class=\"rounded-span\"> &nbsp&#10084;&nbsp</span> <span class=\"rounded-span\"> &nbsp 3 &nbsp </span></a></li>
+\t            <li class=\"nav-item\"><a class=\"navbar-link\">
+\t\t            <span class=\"with-transitions heart-counter\">                  &nbsp 3 &nbsp     </span>
+\t\t            <span class=\"with-transitions heart-span\">                     &#9825; </span>
+\t            </a></li>
 \t            <li class=\"separator v-razdelitel\"></li>
-\t            <li class=\"nav-item {% if this.page.id == 'testovaya-forma' %}active-page{% endif %}\"><a class=\"navbar-link\" href=\"{{ 'testovaya-forma'|page }}\">Получить консультацию</a></li>
+\t            <li class=\"nav-item {% if this.page.id == 'testovaya-forma' %}active-page{% endif %}\">
+\t\t            <a class=\"navbar-link consult-link with-transitions\" href=\"{{ 'testovaya-forma'|page }}\">
+\t\t\t            <strong>Получите консультацию</strong>
+\t\t            </a>
+\t            </li>
 
             </ul>
         </div>

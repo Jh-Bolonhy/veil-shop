@@ -573,6 +573,19 @@ html,body {
   }
 }
 
+/* ================= Футер ==================== */
+
+#footer .jumbotron {
+	background: transparent !important;
+	background-color: transparent !important;
+}
+.footer-form-label {
+	visibility: hidden;
+	position: absolute;
+  left: -999em;
+}
+
+
 /* ================= Форма ==================== */
 textarea {
     resize: none;

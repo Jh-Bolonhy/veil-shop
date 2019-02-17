@@ -1,4 +1,6 @@
-1550173429a:1:{s:15:"main_layout.htm";a:6:{s:8:"fileName";s:15:"main_layout.htm";s:7:"content";s:1580:"description = "Main Layout for Vail-Shop"
+1550395816a:1:{s:15:"main_layout.htm";a:7:{s:8:"fileName";s:15:"main_layout.htm";s:7:"content";s:1739:"description = "Main Layout for Vail-Shop"
+
+[Orderform]
 ==
 <!DOCTYPE html>
 <html>
@@ -14,6 +16,7 @@
         <link rel="icon" type="image/png" href="{{ 'assets/images/october.png'|theme }}">
         <link href="{{ 'assets/css/vendor.css'|theme }}" rel="stylesheet">
         <link href="{{ 'assets/css/theme.css'|theme }}" rel="stylesheet">
+	      <link rel="stylesheet" href="http://oct-veil-shop-fin/plugins/leonidmuzyka/clients/assets\css\masking-input.css" data-autoinit="true"/>
         {% styles %}
     </head>
     <body>
@@ -43,7 +46,7 @@
         {% scripts %}
     </div>
     </body>
-</html>";s:5:"mtime";i:1550133131;s:6:"markup";s:1533:"<!DOCTYPE html>
+</html>";s:5:"mtime";i:1550307146;s:6:"markup";s:1677:"<!DOCTYPE html>
 <html>
     <head>
         <meta charset="utf-8">
@@ -57,6 +60,7 @@
         <link rel="icon" type="image/png" href="{{ 'assets/images/october.png'|theme }}">
         <link href="{{ 'assets/css/vendor.css'|theme }}" rel="stylesheet">
         <link href="{{ 'assets/css/theme.css'|theme }}" rel="stylesheet">
+	      <link rel="stylesheet" href="http://oct-veil-shop-fin/plugins/leonidmuzyka/clients/assets\css\masking-input.css" data-autoinit="true"/>
         {% styles %}
     </head>
     <body>
@@ -86,4 +90,4 @@
         {% scripts %}
     </div>
     </body>
-</html>";s:4:"code";N;s:11:"description";s:25:"Main Layout for Vail-Shop";}}
+</html>";s:4:"code";N;s:11:"description";s:25:"Main Layout for Vail-Shop";s:9:"Orderform";a:0:{}}}
