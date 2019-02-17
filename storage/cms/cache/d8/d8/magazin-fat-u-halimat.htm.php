@@ -1,5 +1,5 @@
 <?php 
-class Cms5c69329728bd1743282227_a1e34348ac2292dbee8cc38ae6acf6c5Class extends Cms\Classes\PageCode
+class Cms5c699e8759fa0426807206_67a7c7cd2c6b3e1c203606e8c3f268d6Class extends Cms\Classes\PageCode
 {
 public function onInit() {
 	if (session_status() == PHP_SESSION_NONE) {
@@ -35,14 +35,14 @@ public function onPicClick() {
 	$ifDeleting = false;
 	if (empty($pics_chosen)) {
 		echo '| array empty | Adding. ';
-		$pics_chosen[] = [$pic_url => $pic_title];
+		$pics_chosen[] = [$pic_url => $pic_description];
 	} else { // $pics_chosen is _NOT_ empty
 
 		echo '| Array is not empty ';
 		foreach ($pics_chosen as $key => $item) {
 			// Checking if pic.url is already in the array
-			foreach ($item as $url => $title) {
-				echo "\n".$key." => ".$url." => ".$title;
+			foreach ($item as $url => $description) {
+				echo "\n".$key." => ".$url." => ".$description;
 				if ($url == $pic_url){
 					// We already have this picture in $pics_chosen = So we are deleting
 					array_splice($pics_chosen,$key,1);
@@ -62,7 +62,7 @@ public function onPicClick() {
 			}
 
 			echo '| Adding. ';
-			$pics_chosen[] = [$pic_url => $pic_title];
+			$pics_chosen[] = [$pic_url => $pic_description];
 		}
 	}
 

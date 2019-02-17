@@ -37,7 +37,7 @@ class __TwigTemplate_68ebc8898c3a9e752bbcfbe5b1b09966d046688ab5e5fa3769f10c10016
             echo "active";
         }
         echo "\"><a href=\"";
-        echo $this->extensions['Cms\Twig\Extension']->pageFilter("home");
+        echo $this->extensions['Cms\Twig\Extension']->pageFilter("magazin-fat-u-halimat");
         echo "\">Виды свадебных фат</a></li>
                   <li class=\"bordered-right ";
         // line 13
@@ -295,7 +295,7 @@ class __TwigTemplate_68ebc8898c3a9e752bbcfbe5b1b09966d046688ab5e5fa3769f10c10016
 
 \t\t\t\t\t\t\t<h4 class=\"footer-header\"> Карта сайта: </h4>
               <ul class=\"bottom-menu\">
-                  <li class=\"bordered-right {% if this.page.id == 'home' %}active{% endif %}\"><a href=\"{{ 'home'|page }}\">Виды свадебных фат</a></li>
+                  <li class=\"bordered-right {% if this.page.id == 'home' %}active{% endif %}\"><a href=\"{{ 'magazin-fat-u-halimat'|page }}\">Виды свадебных фат</a></li>
                   <li class=\"bordered-right {% if this.page.id == 'ajax' %}active{% endif %}\"><a href=\"{{ 'ajax'|page }}\">Как выбрать фату?</a></li>
                   <li class=\"bordered-right {% if this.page.id == 'plugins' %}active{% endif %}\"><a href=\"{{ 'plugins'|page }}\">О нас</a></li>
 \t                <li class=\"bordered-right {% if this.page.id == 'testovaya-forma' %}active{% endif %}\">

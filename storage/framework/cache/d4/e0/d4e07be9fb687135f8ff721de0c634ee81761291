@@ -1,4 +1,4 @@
-1550423386a:1:{s:15:"site/footer.htm";a:6:{s:8:"fileName";s:15:"site/footer.htm";s:7:"content";s:5654:"==
+1550426335a:1:{s:15:"site/footer.htm";a:6:{s:8:"fileName";s:15:"site/footer.htm";s:7:"content";s:5671:"==
 <div id="footer">
     <div class="black">
         <div class="container">
@@ -10,7 +10,7 @@
 
 							<h4 class="footer-header"> Карта сайта: </h4>
               <ul class="bottom-menu">
-                  <li class="bordered-right {% if this.page.id == 'home' %}active{% endif %}"><a href="{{ 'home'|page }}">Виды свадебных фат</a></li>
+                  <li class="bordered-right {% if this.page.id == 'home' %}active{% endif %}"><a href="{{ 'magazin-fat-u-halimat'|page }}">Виды свадебных фат</a></li>
                   <li class="bordered-right {% if this.page.id == 'ajax' %}active{% endif %}"><a href="{{ 'ajax'|page }}">Как выбрать фату?</a></li>
                   <li class="bordered-right {% if this.page.id == 'plugins' %}active{% endif %}"><a href="{{ 'plugins'|page }}">О нас</a></li>
 	                <li class="bordered-right {% if this.page.id == 'testovaya-forma' %}active{% endif %}">
@@ -139,7 +139,7 @@
         </div>
     </div>
 		<div>{{ this.page.redirected }} </div>
-</div>";s:5:"mtime";i:1550422732;s:6:"markup";s:5650:"<div id="footer">
+</div>";s:5:"mtime";i:1550423920;s:6:"markup";s:5667:"<div id="footer">
     <div class="black">
         <div class="container">
 	        <hr>
@@ -150,7 +150,7 @@
 
 							<h4 class="footer-header"> Карта сайта: </h4>
               <ul class="bottom-menu">
-                  <li class="bordered-right {% if this.page.id == 'home' %}active{% endif %}"><a href="{{ 'home'|page }}">Виды свадебных фат</a></li>
+                  <li class="bordered-right {% if this.page.id == 'home' %}active{% endif %}"><a href="{{ 'magazin-fat-u-halimat'|page }}">Виды свадебных фат</a></li>
                   <li class="bordered-right {% if this.page.id == 'ajax' %}active{% endif %}"><a href="{{ 'ajax'|page }}">Как выбрать фату?</a></li>
                   <li class="bordered-right {% if this.page.id == 'plugins' %}active{% endif %}"><a href="{{ 'plugins'|page }}">О нас</a></li>
 	                <li class="bordered-right {% if this.page.id == 'testovaya-forma' %}active{% endif %}">

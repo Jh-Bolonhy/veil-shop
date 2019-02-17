@@ -1,4 +1,4 @@
-1550423249a:1:{s:25:"magazin-fat-u-halimat.htm";a:11:{s:8:"fileName";s:25:"magazin-fat-u-halimat.htm";s:7:"content";s:4044:"title = "Фата мечты!"
+1550426335a:1:{s:25:"magazin-fat-u-halimat.htm";a:11:{s:8:"fileName";s:25:"magazin-fat-u-halimat.htm";s:7:"content";s:4075:"title = "Фата мечты!"
 url = "/"
 layout = "main_layout"
 description = "Здесь каждой невесте можно найти Фату Мечты!"
@@ -44,14 +44,14 @@ public function onPicClick() {
 	$ifDeleting = false;
 	if (empty($pics_chosen)) {
 		echo '| array empty | Adding. ';
-		$pics_chosen[] = [$pic_url => $pic_title];
+		$pics_chosen[] = [$pic_url => $pic_description];
 	} else { // $pics_chosen is _NOT_ empty
 
 		echo '| Array is not empty ';
 		foreach ($pics_chosen as $key => $item) {
 			// Checking if pic.url is already in the array
-			foreach ($item as $url => $title) {
-				echo "\n".$key." => ".$url." => ".$title;
+			foreach ($item as $url => $description) {
+				echo "\n".$key." => ".$url." => ".$description;
 				if ($url == $pic_url){
 					// We already have this picture in $pics_chosen = So we are deleting
 					array_splice($pics_chosen,$key,1);
@@ -71,7 +71,7 @@ public function onPicClick() {
 			}
 
 			echo '| Adding. ';
-			$pics_chosen[] = [$pic_url => $pic_title];
+			$pics_chosen[] = [$pic_url => $pic_description];
 		}
 	}
 
@@ -96,7 +96,7 @@ public function onPicClick() {
 
 <div class="container">
 	<div class="preambula">
-		<a href="{{ 'testovaya-forma'|page }}">>> Нажмите на понравившейся модели и закажите <em><u> бесплатную</u></em>  консультацию с нашим модельером <b>любым удобным для вас способом</b> >></a>
+		<a href="{{ 'testovaya-forma'|page }}">>> Нажмите <b>на понравившейся модели</b> и закажите <em><u> бесплатную</u></em>  консультацию с нашим модельером <b>любым удобным для вас способом</b> >></a>
 	</div>
 
 	<div id="{{ magnific }}" class="magnific">
@@ -139,7 +139,7 @@ public function onPicClick() {
 
 {% if 0 %}
 	<div id="dumper"> {{ dump() }}</div>
-{% endif %}";s:5:"mtime";i:1550398102;s:6:"markup";s:2060:"<div class="jumbotron hidden-xs">
+{% endif %}";s:5:"mtime";i:1550425596;s:6:"markup";s:2067:"<div class="jumbotron hidden-xs">
 	<div class="container">
 		<div class="banner-container">
 			<img src="http://oct-veil-shop-fin/storage/app/uploads/public/5bd/f28/395/5bdf28395ca84989959861.jpg" />
@@ -152,7 +152,7 @@ public function onPicClick() {
 
 <div class="container">
 	<div class="preambula">
-		<a href="{{ 'testovaya-forma'|page }}">>> Нажмите на понравившейся модели и закажите <em><u> бесплатную</u></em>  консультацию с нашим модельером <b>любым удобным для вас способом</b> >></a>
+		<a href="{{ 'testovaya-forma'|page }}">>> Нажмите <b>на понравившейся модели</b> и закажите <em><u> бесплатную</u></em>  консультацию с нашим модельером <b>любым удобным для вас способом</b> >></a>
 	</div>
 
 	<div id="{{ magnific }}" class="magnific">
@@ -195,7 +195,7 @@ public function onPicClick() {
 
 {% if 0 %}
 	<div id="dumper"> {{ dump() }}</div>
-{% endif %}";s:4:"code";s:1723:"public function onInit() {
+{% endif %}";s:4:"code";s:1747:"public function onInit() {
 	if (session_status() == PHP_SESSION_NONE) {
 	    session_start();
 	}
@@ -229,14 +229,14 @@ public function onPicClick() {
 	$ifDeleting = false;
 	if (empty($pics_chosen)) {
 		echo '| array empty | Adding. ';
-		$pics_chosen[] = [$pic_url => $pic_title];
+		$pics_chosen[] = [$pic_url => $pic_description];
 	} else { // $pics_chosen is _NOT_ empty
 
 		echo '| Array is not empty ';
 		foreach ($pics_chosen as $key => $item) {
 			// Checking if pic.url is already in the array
-			foreach ($item as $url => $title) {
-				echo "\n".$key." => ".$url." => ".$title;
+			foreach ($item as $url => $description) {
+				echo "\n".$key." => ".$url." => ".$description;
 				if ($url == $pic_url){
 					// We already have this picture in $pics_chosen = So we are deleting
 					array_splice($pics_chosen,$key,1);
@@ -256,7 +256,7 @@ public function onPicClick() {
 			}
 
 			echo '| Adding. ';
-			$pics_chosen[] = [$pic_url => $pic_title];
+			$pics_chosen[] = [$pic_url => $pic_description];
 		}
 	}
 
