@@ -29,9 +29,9 @@ class __TwigTemplate_68ebc8898c3a9e752bbcfbe5b1b09966d046688ab5e5fa3769f10c10016
 
 \t\t        <div class=\"col-sm-3\">
 
-\t\t\t\t\t\t\t<p class=\"footer-header\"> <b>Карта сайта: </b></p>
+\t\t\t\t\t\t\t<h4 class=\"footer-header\"> Карта сайта: </h4>
               <ul class=\"bottom-menu\">
-                  <li class=\"";
+                  <li class=\"bordered-right ";
         // line 12
         if ((twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, ($context["this"] ?? null), "page", array()), "id", array()) == "home")) {
             echo "active";
@@ -39,7 +39,7 @@ class __TwigTemplate_68ebc8898c3a9e752bbcfbe5b1b09966d046688ab5e5fa3769f10c10016
         echo "\"><a href=\"";
         echo $this->extensions['Cms\Twig\Extension']->pageFilter("home");
         echo "\">Виды свадебных фат</a></li>
-                  <li class=\"";
+                  <li class=\"bordered-right ";
         // line 13
         if ((twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, ($context["this"] ?? null), "page", array()), "id", array()) == "ajax")) {
             echo "active";
@@ -47,7 +47,7 @@ class __TwigTemplate_68ebc8898c3a9e752bbcfbe5b1b09966d046688ab5e5fa3769f10c10016
         echo "\"><a href=\"";
         echo $this->extensions['Cms\Twig\Extension']->pageFilter("ajax");
         echo "\">Как выбрать фату?</a></li>
-                  <li class=\"";
+                  <li class=\"bordered-right ";
         // line 14
         if ((twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, ($context["this"] ?? null), "page", array()), "id", array()) == "plugins")) {
             echo "active";
@@ -55,39 +55,61 @@ class __TwigTemplate_68ebc8898c3a9e752bbcfbe5b1b09966d046688ab5e5fa3769f10c10016
         echo "\"><a href=\"";
         echo $this->extensions['Cms\Twig\Extension']->pageFilter("plugins");
         echo "\">О нас</a></li>
-\t                <li class=\"separator\"><hr></li>
+\t                <li class=\"bordered-right ";
+        // line 15
+        if ((twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, ($context["this"] ?? null), "page", array()), "id", array()) == "testovaya-forma")) {
+            echo "active";
+        }
+        echo "\">
+\t      \t\t            <a href=\"";
+        // line 16
+        echo $this->extensions['Cms\Twig\Extension']->pageFilter("testovaya-forma");
+        echo "\">
+\t      \t\t\t            <strong>Получите консультацию</strong>
+\t      \t\t            </a>
+\t      \t            </li>
+\t                <li class=\"bordered-right\">&nbsp</li>
+\t                <li class=\"bordered-right\">&nbsp</li>
+\t                <li class=\"bordered-right\">&nbsp</li>
+\t                <li class=\"bordered-right\">&nbsp</li>
               </ul>
-\t\t\t        <p class=\"footer-header\"> <b> Мы в социальных сетях </b></p>
+\t\t\t        ";
+        // line 25
+        if (0) {
+            // line 26
+            echo "\t\t\t        <h4 class=\"footer-header\"> Мы в социальных сетях </h4>
 \t\t\t        <p> Иконки социальных сетей </p>
+\t\t\t\t\t\t\t";
+        }
+        // line 29
+        echo "            </div>
 
-            </div>
-
-\t\t        <div class=\"col-sm-7 text-justify\">
-\t\t\t        <p class=\"footer-header\"> <b>У Вас остались вопросы? - Задайте их нам!</b></p>
+\t\t        <div class=\"col-sm-7 text-justify bordered-left\">
+\t\t\t        <h4 class=\"footer-header footer-voprosi\"> У Вас остались вопросы? - Задайте их нам! </h4>
 \t\t\t             
 \t\t\t                 
 \t\t\t\t\t\t\t<div id=\"divForAnyFlash1\">
 \t\t\t\t\t\t\t\t";
-        // line 27
+        // line 36
         $context['__cms_partial_params'] = [];
         echo $this->env->getExtension('Cms\Twig\Extension')->partialFunction((($context["Orderform"] ?? null) . "::_flash")        , $context['__cms_partial_params']        , true        );
         unset($context['__cms_partial_params']);
-        // line 28
+        // line 37
         echo "\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t<div class=\"jumbotron\">
 
 \t\t\t\t\t\t\t<form
 \t\t\t\t\t\t\t\tdata-request=\"";
-        // line 32
+        // line 41
         echo twig_escape_filter($this->env, ($context["Orderform"] ?? null), "html", null, true);
         echo "::onAddOrder\"
 \t\t\t\t\t\t\t  data-request-update=\"
 \t\t\t\t\t\t\t       '";
-        // line 34
+        // line 43
         echo twig_escape_filter($this->env, ($context["Orderform"] ?? null), "html", null, true);
         echo "::_flash' : '#divForAnyFlash1'
 \t\t\t\t\t\t\t    ,  '";
-        // line 35
+        // line 44
         echo twig_escape_filter($this->env, ($context["Orderform"] ?? null), "html", null, true);
         echo "::_dumper' : '#info'
 \t\t\t\t\t\t\t\t\"
@@ -103,27 +125,27 @@ class __TwigTemplate_68ebc8898c3a9e752bbcfbe5b1b09966d046688ab5e5fa3769f10c10016
 \t\t\t\t\t\t\t\t\t\t    class=\"form-control size-large\"
 \t\t\t\t\t\t\t\t\t\t    id=\"inputComment1\"
 \t\t\t\t\t\t\t\t\t\t    rows=\"2\"
-\t\t\t\t\t\t\t\t\t\t    placeholder=\"Задайте Ваш вопрос\"
+\t\t\t\t\t\t\t\t\t\t    placeholder=\"Ваш вопрос\"
 \t\t\t\t\t\t\t\t\t    >";
-        // line 50
+        // line 59
         echo call_user_func_array($this->env->getFunction('form_value')->getCallable(), array("value", "commentary1"));
         echo "</textarea>
 \t\t\t\t\t\t\t\t    </div>
 
 \t\t\t\t\t\t\t\t\t\t";
-        // line 53
+        // line 62
         if (twig_get_attribute($this->env, $this->source, ($context["errors"] ?? null), "has", array(0 => "commentary1"), "method")) {
-            // line 54
+            // line 63
             echo "\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"col-sm-2\"></div>
 \t\t\t\t\t\t\t\t\t\t\t    <div class=\" col-sm-10\">
 \t\t\t\t\t\t\t\t\t\t\t        <small class=\"error-message\">";
-            // line 56
+            // line 65
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, ($context["errors"] ?? null), "first", array(0 => "commentary1"), "method"), "html", null, true);
             echo "</small>
 \t\t\t\t\t\t\t\t\t\t\t    </div>
 \t\t\t\t\t\t\t\t\t\t\t";
         }
-        // line 59
+        // line 68
         echo "\t\t\t\t\t\t\t  </div>
 \t\t\t\t\t\t\t\t<div class=\"form-group row\">
 \t\t\t\t\t\t\t\t    <label for=\"inputName1\" class=\"col-sm-2 col-form-label footer-form-label\">Имя</label>
@@ -135,26 +157,26 @@ class __TwigTemplate_68ebc8898c3a9e752bbcfbe5b1b09966d046688ab5e5fa3769f10c10016
 \t\t\t\t\t\t\t\t\t      id=\"inputName1\"
 \t\t\t\t\t\t\t\t\t      placeholder=\"Как к Вам обращаться?\"
 \t\t\t\t\t\t\t\t\t      value=\"";
-        // line 69
+        // line 78
         echo call_user_func_array($this->env->getFunction('form_value')->getCallable(), array("value", "name1"));
         echo "\"
 \t\t\t\t\t\t\t\t      />
 \t\t\t\t\t\t\t\t    </div>
 
 \t\t\t\t\t\t\t\t\t";
-        // line 73
+        // line 82
         if (twig_get_attribute($this->env, $this->source, ($context["errors"] ?? null), "has", array(0 => "name1"), "method")) {
-            // line 74
+            // line 83
             echo "\t\t\t\t\t\t\t\t\t\t\t<div class=\"col-sm-2\"></div>
 \t\t\t\t\t\t\t\t\t    <div class=\" col-sm-10\">
 \t\t\t\t\t\t\t\t\t        <small class=\"error-message\">";
-            // line 76
+            // line 85
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, ($context["errors"] ?? null), "first", array(0 => "name1"), "method"), "html", null, true);
             echo "</small>
 \t\t\t\t\t\t\t\t\t    </div>
 \t\t\t\t\t\t\t\t\t";
         }
-        // line 79
+        // line 88
         echo "\t\t\t\t\t\t\t  </div>
 
 \t\t\t\t\t\t\t\t<div class=\"form-group row\">
@@ -167,32 +189,32 @@ class __TwigTemplate_68ebc8898c3a9e752bbcfbe5b1b09966d046688ab5e5fa3769f10c10016
 \t\t\t\t\t\t\t\t\t\tpattern=\"\\(\\d{3}\\) \\d{3}\\ \\d{4}\"
 \t\t\t\t\t\t\t\t\t\tclass=\"form-control masked\"
 \t\t\t\t\t\t\t\t\t\ttitle=\"10-digit number\"
-\t\t\t\t\t\t\t\t\t\tplaceholder=\"Введите удобный контактный телефон\"
+\t\t\t\t\t\t\t\t\t\tplaceholder=\"Удобный контактный телефон\"
 \t\t\t\t\t\t\t\t\t\tvalue=\"";
-        // line 92
+        // line 101
         echo call_user_func_array($this->env->getFunction('form_value')->getCallable(), array("value", "phone_test1"));
         echo "\"
 \t\t\t\t\t\t\t\t\t/>
 \t\t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t\t";
-        // line 95
+        // line 104
         if (twig_get_attribute($this->env, $this->source, ($context["errors"] ?? null), "has", array(0 => "phone_test1"), "method")) {
-            // line 96
+            // line 105
             echo "\t\t\t\t\t\t\t\t\t\t          <div class=\"col-sm-2\"></div>
 \t\t\t\t\t\t\t\t\t\t          <div class=\" col-sm-10\">
 \t\t\t\t\t\t\t\t\t\t              <small class=\"error-message\">";
-            // line 98
+            // line 107
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, ($context["errors"] ?? null), "first", array(0 => "phone_test1"), "method"), "html", null, true);
             echo "</small>
 \t\t\t\t\t\t\t\t\t\t          </div>
 \t\t\t\t\t\t\t\t\t\t      ";
         }
-        // line 101
+        // line 110
         echo "\t\t\t\t\t\t\t  </div>
 \t\t\t\t\t\t\t\t<input type=\"hidden\" name=\"action\" value=\"from-footer\">
 \t\t\t\t\t\t\t  <div class=\"form-group row\">
 \t\t\t\t\t\t\t    <div class=\"col-sm-10\">
-\t\t\t\t\t\t\t      <button type=\"submit\" class=\"btn btn-primary\" data-attach-loading>Отправляем!</button>
+\t\t\t\t\t\t\t      <button type=\"submit\" class=\"btn btn-primary btn-footer\" data-attach-loading>Отправить!</button>
 \t\t\t\t\t\t\t    </div>
 \t\t\t\t\t\t\t  </div>
 
@@ -201,45 +223,45 @@ class __TwigTemplate_68ebc8898c3a9e752bbcfbe5b1b09966d046688ab5e5fa3769f10c10016
 \t\t\t\t\t\t\t</form>
 
 \t\t\t\t\t\t\t\t";
-        // line 113
+        // line 122
         echo $this->env->getExtension('Cms\Twig\Extension')->startBlock('scripts'        );
-        // line 114
+        // line 123
         echo "\t\t\t\t\t\t\t\t\t<script src=\"http://oct-veil-shop-fin/plugins/leonidmuzyka/clients/assets/js/masking-input.js\" data-autoinit=\"true\"></script>
 \t\t\t\t\t\t\t\t";
-        // line 113
+        // line 122
         echo $this->env->getExtension('Cms\Twig\Extension')->endBlock(true        );
-        // line 116
+        // line 125
         echo "
 \t\t\t\t\t\t\t\t";
-        // line 117
+        // line 126
         if (0) {
-            // line 118
+            // line 127
             echo "\t\t\t\t\t\t\t\t<div class=\"container\" id=\"info\">
 \t\t\t\t\t\t\t    ";
-            // line 119
+            // line 128
             $context['__cms_partial_params'] = [];
             $context['__cms_partial_params']['for_dump'] = twig_get_attribute($this->env, $this->source, ($context["Orderform"] ?? null), "for_dump", array())            ;
             echo $this->env->getExtension('Cms\Twig\Extension')->partialFunction((($context["Orderform"] ?? null) . "::_dumper")            , $context['__cms_partial_params']            , true            );
             unset($context['__cms_partial_params']);
-            // line 120
+            // line 129
             echo "\t\t\t\t\t\t\t  </div>
 \t\t\t\t\t\t\t\t";
         }
-        // line 122
+        // line 131
         echo "\t\t\t\t\t\t\t</div>
 \t\t        </div>
 \t\t        <div class=\"col-sm-3\"></div>
 \t        </div>
 \t        <div class=\"row\">
 \t\t        <p class=\"muted credit text-center\">&copy; 2013 - ";
-        // line 127
+        // line 136
         echo twig_escape_filter($this->env, twig_date_format_filter($this->env, "now", "Y"), "html", null, true);
         echo " Khlimat Saidudinova &amp; Leonid Muzyka.</p>
 \t        </div>
         </div>
     </div>
 \t\t<div>";
-        // line 131
+        // line 140
         echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, ($context["this"] ?? null), "page", array()), "redirected", array()), "html", null, true);
         echo " </div>
 </div>";
@@ -257,7 +279,7 @@ class __TwigTemplate_68ebc8898c3a9e752bbcfbe5b1b09966d046688ab5e5fa3769f10c10016
 
     public function getDebugInfo()
     {
-        return array (  243 => 131,  236 => 127,  229 => 122,  225 => 120,  220 => 119,  217 => 118,  215 => 117,  212 => 116,  210 => 113,  207 => 114,  205 => 113,  191 => 101,  185 => 98,  181 => 96,  179 => 95,  173 => 92,  158 => 79,  152 => 76,  148 => 74,  146 => 73,  139 => 69,  127 => 59,  121 => 56,  117 => 54,  115 => 53,  109 => 50,  91 => 35,  87 => 34,  82 => 32,  76 => 28,  72 => 27,  52 => 14,  44 => 13,  36 => 12,  23 => 1,);
+        return array (  265 => 140,  258 => 136,  251 => 131,  247 => 129,  242 => 128,  239 => 127,  237 => 126,  234 => 125,  232 => 122,  229 => 123,  227 => 122,  213 => 110,  207 => 107,  203 => 105,  201 => 104,  195 => 101,  180 => 88,  174 => 85,  170 => 83,  168 => 82,  161 => 78,  149 => 68,  143 => 65,  139 => 63,  137 => 62,  131 => 59,  113 => 44,  109 => 43,  104 => 41,  98 => 37,  94 => 36,  85 => 29,  80 => 26,  78 => 25,  66 => 16,  60 => 15,  52 => 14,  44 => 13,  36 => 12,  23 => 1,);
     }
 
     public function getSourceContext()
@@ -271,20 +293,29 @@ class __TwigTemplate_68ebc8898c3a9e752bbcfbe5b1b09966d046688ab5e5fa3769f10c10016
 
 \t\t        <div class=\"col-sm-3\">
 
-\t\t\t\t\t\t\t<p class=\"footer-header\"> <b>Карта сайта: </b></p>
+\t\t\t\t\t\t\t<h4 class=\"footer-header\"> Карта сайта: </h4>
               <ul class=\"bottom-menu\">
-                  <li class=\"{% if this.page.id == 'home' %}active{% endif %}\"><a href=\"{{ 'home'|page }}\">Виды свадебных фат</a></li>
-                  <li class=\"{% if this.page.id == 'ajax' %}active{% endif %}\"><a href=\"{{ 'ajax'|page }}\">Как выбрать фату?</a></li>
-                  <li class=\"{% if this.page.id == 'plugins' %}active{% endif %}\"><a href=\"{{ 'plugins'|page }}\">О нас</a></li>
-\t                <li class=\"separator\"><hr></li>
+                  <li class=\"bordered-right {% if this.page.id == 'home' %}active{% endif %}\"><a href=\"{{ 'home'|page }}\">Виды свадебных фат</a></li>
+                  <li class=\"bordered-right {% if this.page.id == 'ajax' %}active{% endif %}\"><a href=\"{{ 'ajax'|page }}\">Как выбрать фату?</a></li>
+                  <li class=\"bordered-right {% if this.page.id == 'plugins' %}active{% endif %}\"><a href=\"{{ 'plugins'|page }}\">О нас</a></li>
+\t                <li class=\"bordered-right {% if this.page.id == 'testovaya-forma' %}active{% endif %}\">
+\t      \t\t            <a href=\"{{ 'testovaya-forma'|page }}\">
+\t      \t\t\t            <strong>Получите консультацию</strong>
+\t      \t\t            </a>
+\t      \t            </li>
+\t                <li class=\"bordered-right\">&nbsp</li>
+\t                <li class=\"bordered-right\">&nbsp</li>
+\t                <li class=\"bordered-right\">&nbsp</li>
+\t                <li class=\"bordered-right\">&nbsp</li>
               </ul>
-\t\t\t        <p class=\"footer-header\"> <b> Мы в социальных сетях </b></p>
+\t\t\t        {% if 0 %}
+\t\t\t        <h4 class=\"footer-header\"> Мы в социальных сетях </h4>
 \t\t\t        <p> Иконки социальных сетей </p>
-
+\t\t\t\t\t\t\t{% endif %}
             </div>
 
-\t\t        <div class=\"col-sm-7 text-justify\">
-\t\t\t        <p class=\"footer-header\"> <b>У Вас остались вопросы? - Задайте их нам!</b></p>
+\t\t        <div class=\"col-sm-7 text-justify bordered-left\">
+\t\t\t        <h4 class=\"footer-header footer-voprosi\"> У Вас остались вопросы? - Задайте их нам! </h4>
 \t\t\t             
 \t\t\t                 
 \t\t\t\t\t\t\t<div id=\"divForAnyFlash1\">
@@ -310,7 +341,7 @@ class __TwigTemplate_68ebc8898c3a9e752bbcfbe5b1b09966d046688ab5e5fa3769f10c10016
 \t\t\t\t\t\t\t\t\t\t    class=\"form-control size-large\"
 \t\t\t\t\t\t\t\t\t\t    id=\"inputComment1\"
 \t\t\t\t\t\t\t\t\t\t    rows=\"2\"
-\t\t\t\t\t\t\t\t\t\t    placeholder=\"Задайте Ваш вопрос\"
+\t\t\t\t\t\t\t\t\t\t    placeholder=\"Ваш вопрос\"
 \t\t\t\t\t\t\t\t\t    >{{ form_value('commentary1') }}</textarea>
 \t\t\t\t\t\t\t\t    </div>
 
@@ -352,7 +383,7 @@ class __TwigTemplate_68ebc8898c3a9e752bbcfbe5b1b09966d046688ab5e5fa3769f10c10016
 \t\t\t\t\t\t\t\t\t\tpattern=\"\\(\\d{3}\\) \\d{3}\\ \\d{4}\"
 \t\t\t\t\t\t\t\t\t\tclass=\"form-control masked\"
 \t\t\t\t\t\t\t\t\t\ttitle=\"10-digit number\"
-\t\t\t\t\t\t\t\t\t\tplaceholder=\"Введите удобный контактный телефон\"
+\t\t\t\t\t\t\t\t\t\tplaceholder=\"Удобный контактный телефон\"
 \t\t\t\t\t\t\t\t\t\tvalue=\"{{ form_value('phone_test1') }}\"
 \t\t\t\t\t\t\t\t\t/>
 \t\t\t\t\t\t\t\t\t</div>
@@ -366,7 +397,7 @@ class __TwigTemplate_68ebc8898c3a9e752bbcfbe5b1b09966d046688ab5e5fa3769f10c10016
 \t\t\t\t\t\t\t\t<input type=\"hidden\" name=\"action\" value=\"from-footer\">
 \t\t\t\t\t\t\t  <div class=\"form-group row\">
 \t\t\t\t\t\t\t    <div class=\"col-sm-10\">
-\t\t\t\t\t\t\t      <button type=\"submit\" class=\"btn btn-primary\" data-attach-loading>Отправляем!</button>
+\t\t\t\t\t\t\t      <button type=\"submit\" class=\"btn btn-primary btn-footer\" data-attach-loading>Отправить!</button>
 \t\t\t\t\t\t\t    </div>
 \t\t\t\t\t\t\t  </div>
 

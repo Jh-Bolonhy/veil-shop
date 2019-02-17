@@ -486,25 +486,7 @@
 body {
   padding-top: 70px;
 }
-.black {
-	background-color: black;
-}
-.bottom-menu {
-	list-style-type: none;
-	color: lightpink;
-}
-.bottom-menu li {
-	border-right: 1px solid bisque;
-}
-.v-line {
 
-}
-.bottom-menu a {
-	color: bisque;
-}
-.bottom-menu a:hover {
-
-}
 
 /*  ============================================= Новые классы =========================================== */
 html,body {
@@ -579,12 +561,46 @@ html,body {
 	background: transparent !important;
 	background-color: transparent !important;
 }
+.black {
+	background-color: black;
+}
+.bottom-menu {
+	list-style-type: none;
+	color: lightpink;
+}
+.bottom-menu li {
+	/* border-right: 1px solid bisque; */
+}
+.v-line {
+
+}
+.bordered-right {
+	border-right: 1px solid #eeeeee;
+}
+.bottom-menu a {
+	color: bisque;
+}
+.bottom-menu a:hover {
+
+}
 .footer-form-label {
 	visibility: hidden;
 	position: absolute;
   left: -999em;
 }
-
+.footer-header{
+	color: #586667 !important;
+	text-align: center;
+}
+.footer-voprosi {
+	text-align: left;
+	margin-left: 70px;
+}
+.btn-footer {
+	background-color: #56a56d !important;
+	border-color: #56a56d !important;
+	float: right;
+}
 
 /* ================= Форма ==================== */
 textarea {

@@ -1,4 +1,4 @@
-1550395835a:1:{s:15:"site/footer.htm";a:6:{s:8:"fileName";s:15:"site/footer.htm";s:7:"content";s:5096:"==
+1550397913a:1:{s:15:"site/footer.htm";a:6:{s:8:"fileName";s:15:"site/footer.htm";s:7:"content";s:5653:"==
 <div id="footer">
     <div class="black">
         <div class="container">
@@ -8,20 +8,29 @@
 
 		        <div class="col-sm-3">
 
-							<p class="footer-header"> <b>Карта сайта: </b></p>
+							<h4 class="footer-header"> Карта сайта: </h4>
               <ul class="bottom-menu">
-                  <li class="{% if this.page.id == 'home' %}active{% endif %}"><a href="{{ 'home'|page }}">Виды свадебных фат</a></li>
-                  <li class="{% if this.page.id == 'ajax' %}active{% endif %}"><a href="{{ 'ajax'|page }}">Как выбрать фату?</a></li>
-                  <li class="{% if this.page.id == 'plugins' %}active{% endif %}"><a href="{{ 'plugins'|page }}">О нас</a></li>
-	                <li class="separator"><hr></li>
+                  <li class="bordered-right {% if this.page.id == 'home' %}active{% endif %}"><a href="{{ 'home'|page }}">Виды свадебных фат</a></li>
+                  <li class="bordered-right {% if this.page.id == 'ajax' %}active{% endif %}"><a href="{{ 'ajax'|page }}">Как выбрать фату?</a></li>
+                  <li class="bordered-right {% if this.page.id == 'plugins' %}active{% endif %}"><a href="{{ 'plugins'|page }}">О нас</a></li>
+	                <li class="bordered-right {% if this.page.id == 'testovaya-forma' %}active{% endif %}">
+	      		            <a href="{{ 'testovaya-forma'|page }}">
+	      			            <strong>Получите консультацию</strong>
+	      		            </a>
+	      	            </li>
+	                <li class="bordered-right">&nbsp</li>
+	                <li class="bordered-right">&nbsp</li>
+	                <li class="bordered-right">&nbsp</li>
+	                <li class="bordered-right">&nbsp</li>
               </ul>
-			        <p class="footer-header"> <b> Мы в социальных сетях </b></p>
+			        {% if 0 %}
+			        <h4 class="footer-header"> Мы в социальных сетях </h4>
 			        <p> Иконки социальных сетей </p>
-
+							{% endif %}
             </div>
 
-		        <div class="col-sm-7 text-justify">
-			        <p class="footer-header"> <b>У Вас остались вопросы? - Задайте их нам!</b></p>
+		        <div class="col-sm-7 text-justify bordered-left">
+			        <h4 class="footer-header footer-voprosi"> У Вас остались вопросы? - Задайте их нам! </h4>
 			             
 			                 
 							<div id="divForAnyFlash1">
@@ -47,7 +56,7 @@
 										    class="form-control size-large"
 										    id="inputComment1"
 										    rows="2"
-										    placeholder="Задайте Ваш вопрос"
+										    placeholder="Ваш вопрос"
 									    >{{ form_value('commentary1') }}</textarea>
 								    </div>
 
@@ -89,7 +98,7 @@
 										pattern="\(\d{3}\) \d{3}\ \d{4}"
 										class="form-control masked"
 										title="10-digit number"
-										placeholder="Введите удобный контактный телефон"
+										placeholder="Удобный контактный телефон"
 										value="{{ form_value('phone_test1') }}"
 									/>
 									</div>
@@ -103,7 +112,7 @@
 								<input type="hidden" name="action" value="from-footer">
 							  <div class="form-group row">
 							    <div class="col-sm-10">
-							      <button type="submit" class="btn btn-primary" data-attach-loading>Отправляем!</button>
+							      <button type="submit" class="btn btn-primary btn-footer" data-attach-loading>Отправить!</button>
 							    </div>
 							  </div>
 
@@ -130,7 +139,7 @@
         </div>
     </div>
 		<div>{{ this.page.redirected }} </div>
-</div>";s:5:"mtime";i:1550393803;s:6:"markup";s:5092:"<div id="footer">
+</div>";s:5:"mtime";i:1550397312;s:6:"markup";s:5649:"<div id="footer">
     <div class="black">
         <div class="container">
 	        <hr>
@@ -139,20 +148,29 @@
 
 		        <div class="col-sm-3">
 
-							<p class="footer-header"> <b>Карта сайта: </b></p>
+							<h4 class="footer-header"> Карта сайта: </h4>
               <ul class="bottom-menu">
-                  <li class="{% if this.page.id == 'home' %}active{% endif %}"><a href="{{ 'home'|page }}">Виды свадебных фат</a></li>
-                  <li class="{% if this.page.id == 'ajax' %}active{% endif %}"><a href="{{ 'ajax'|page }}">Как выбрать фату?</a></li>
-                  <li class="{% if this.page.id == 'plugins' %}active{% endif %}"><a href="{{ 'plugins'|page }}">О нас</a></li>
-	                <li class="separator"><hr></li>
+                  <li class="bordered-right {% if this.page.id == 'home' %}active{% endif %}"><a href="{{ 'home'|page }}">Виды свадебных фат</a></li>
+                  <li class="bordered-right {% if this.page.id == 'ajax' %}active{% endif %}"><a href="{{ 'ajax'|page }}">Как выбрать фату?</a></li>
+                  <li class="bordered-right {% if this.page.id == 'plugins' %}active{% endif %}"><a href="{{ 'plugins'|page }}">О нас</a></li>
+	                <li class="bordered-right {% if this.page.id == 'testovaya-forma' %}active{% endif %}">
+	      		            <a href="{{ 'testovaya-forma'|page }}">
+	      			            <strong>Получите консультацию</strong>
+	      		            </a>
+	      	            </li>
+	                <li class="bordered-right">&nbsp</li>
+	                <li class="bordered-right">&nbsp</li>
+	                <li class="bordered-right">&nbsp</li>
+	                <li class="bordered-right">&nbsp</li>
               </ul>
-			        <p class="footer-header"> <b> Мы в социальных сетях </b></p>
+			        {% if 0 %}
+			        <h4 class="footer-header"> Мы в социальных сетях </h4>
 			        <p> Иконки социальных сетей </p>
-
+							{% endif %}
             </div>
 
-		        <div class="col-sm-7 text-justify">
-			        <p class="footer-header"> <b>У Вас остались вопросы? - Задайте их нам!</b></p>
+		        <div class="col-sm-7 text-justify bordered-left">
+			        <h4 class="footer-header footer-voprosi"> У Вас остались вопросы? - Задайте их нам! </h4>
 			             
 			                 
 							<div id="divForAnyFlash1">
@@ -178,7 +196,7 @@
 										    class="form-control size-large"
 										    id="inputComment1"
 										    rows="2"
-										    placeholder="Задайте Ваш вопрос"
+										    placeholder="Ваш вопрос"
 									    >{{ form_value('commentary1') }}</textarea>
 								    </div>
 
@@ -220,7 +238,7 @@
 										pattern="\(\d{3}\) \d{3}\ \d{4}"
 										class="form-control masked"
 										title="10-digit number"
-										placeholder="Введите удобный контактный телефон"
+										placeholder="Удобный контактный телефон"
 										value="{{ form_value('phone_test1') }}"
 									/>
 									</div>
@@ -234,7 +252,7 @@
 								<input type="hidden" name="action" value="from-footer">
 							  <div class="form-group row">
 							    <div class="col-sm-10">
-							      <button type="submit" class="btn btn-primary" data-attach-loading>Отправляем!</button>
+							      <button type="submit" class="btn btn-primary btn-footer" data-attach-loading>Отправить!</button>
 							    </div>
 							  </div>
 
