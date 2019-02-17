@@ -1,4 +1,4 @@
-1550398410a:1:{s:15:"site/header.htm";a:6:{s:8:"fileName";s:15:"site/header.htm";s:7:"content";s:2133:"==
+1550423436a:1:{s:15:"site/header.htm";a:6:{s:8:"fileName";s:15:"site/header.htm";s:7:"content";s:2147:"==
 <!-- Nav -->
 <nav id="layout-nav" class="navbar-pink navbar navbar-default navbar-fixed-top " role="navigation" >
     <div class="container">
@@ -20,7 +20,7 @@
 	            <li class="dot-razdelitel"></li>
               <li class="{% if this.page.id == 'plugins' %}active-page{% endif %}"><a href="{{ 'plugins'|page }}">О нас</a></li>
 	            <li class="separator v-razdelitel"></li>
-	            <li class="nav-item"><a class="navbar-link">
+	            <li class="nav-item"><a class="navbar-link header-holder">
 		            <span class="with-transitions heart-counter">                  &nbsp 3 &nbsp     </span>
 		            <span class="with-transitions heart-span">                     &#9825; </span>
 	            </a></li>
@@ -35,7 +35,7 @@
         </div>
     </div>
 </nav>
-";s:5:"mtime";i:1550235837;s:6:"markup";s:2127:"<!-- Nav -->
+";s:5:"mtime";i:1550422834;s:6:"markup";s:2141:"<!-- Nav -->
 <nav id="layout-nav" class="navbar-pink navbar navbar-default navbar-fixed-top " role="navigation" >
     <div class="container">
         <div class="navbar-header">
@@ -56,7 +56,7 @@
 	            <li class="dot-razdelitel"></li>
               <li class="{% if this.page.id == 'plugins' %}active-page{% endif %}"><a href="{{ 'plugins'|page }}">О нас</a></li>
 	            <li class="separator v-razdelitel"></li>
-	            <li class="nav-item"><a class="navbar-link">
+	            <li class="nav-item"><a class="navbar-link header-holder">
 		            <span class="with-transitions heart-counter">                  &nbsp 3 &nbsp     </span>
 		            <span class="with-transitions heart-span">                     &#9825; </span>
 	            </a></li>

@@ -256,7 +256,7 @@ class __TwigTemplate_68ebc8898c3a9e752bbcfbe5b1b09966d046688ab5e5fa3769f10c10016
 \t\t        <p class=\"muted credit text-center\">&copy; 2013 - ";
         // line 136
         echo twig_escape_filter($this->env, twig_date_format_filter($this->env, "now", "Y"), "html", null, true);
-        echo " Khlimat Saidudinova &amp; Leonid Muzyka.</p>
+        echo " Khalimat Saidudinova &amp; Leonid Muzyka.</p>
 \t        </div>
         </div>
     </div>
@@ -419,7 +419,7 @@ class __TwigTemplate_68ebc8898c3a9e752bbcfbe5b1b09966d046688ab5e5fa3769f10c10016
 \t\t        <div class=\"col-sm-3\"></div>
 \t        </div>
 \t        <div class=\"row\">
-\t\t        <p class=\"muted credit text-center\">&copy; 2013 - {{ \"now\"|date(\"Y\") }} Khlimat Saidudinova &amp; Leonid Muzyka.</p>
+\t\t        <p class=\"muted credit text-center\">&copy; 2013 - {{ \"now\"|date(\"Y\") }} Khalimat Saidudinova &amp; Leonid Muzyka.</p>
 \t        </div>
         </div>
     </div>

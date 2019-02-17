@@ -523,6 +523,9 @@ html,body {
   -o-transition: all 0.5s linear !important;
   transition: all 0.5s linear !important;
 }
+.header-holder {
+	padding-bottom: 10px !important;
+}
 .heart-span {
 	position:relative;
 	font-size: 50px;

@@ -65,7 +65,7 @@ class __TwigTemplate_ddb60f9a96e26c997c30f1fe10e1f1e743756220187b81261366e00d223
         echo $this->extensions['Cms\Twig\Extension']->pageFilter("plugins");
         echo "\">О нас</a></li>
 \t            <li class=\"separator v-razdelitel\"></li>
-\t            <li class=\"nav-item\"><a class=\"navbar-link\">
+\t            <li class=\"nav-item\"><a class=\"navbar-link header-holder\">
 \t\t            <span class=\"with-transitions heart-counter\">                  &nbsp 3 &nbsp     </span>
 \t\t            <span class=\"with-transitions heart-span\">                     &#9825; </span>
 \t            </a></li>
@@ -128,7 +128,7 @@ class __TwigTemplate_ddb60f9a96e26c997c30f1fe10e1f1e743756220187b81261366e00d223
 \t            <li class=\"dot-razdelitel\"></li>
               <li class=\"{% if this.page.id == 'plugins' %}active-page{% endif %}\"><a href=\"{{ 'plugins'|page }}\">О нас</a></li>
 \t            <li class=\"separator v-razdelitel\"></li>
-\t            <li class=\"nav-item\"><a class=\"navbar-link\">
+\t            <li class=\"nav-item\"><a class=\"navbar-link header-holder\">
 \t\t            <span class=\"with-transitions heart-counter\">                  &nbsp 3 &nbsp     </span>
 \t\t            <span class=\"with-transitions heart-span\">                     &#9825; </span>
 \t            </a></li>

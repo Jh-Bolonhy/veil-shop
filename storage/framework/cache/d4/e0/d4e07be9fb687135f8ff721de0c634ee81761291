@@ -1,4 +1,4 @@
-1550397913a:1:{s:15:"site/footer.htm";a:6:{s:8:"fileName";s:15:"site/footer.htm";s:7:"content";s:5653:"==
+1550423386a:1:{s:15:"site/footer.htm";a:6:{s:8:"fileName";s:15:"site/footer.htm";s:7:"content";s:5654:"==
 <div id="footer">
     <div class="black">
         <div class="container">
@@ -134,12 +134,12 @@
 		        <div class="col-sm-3"></div>
 	        </div>
 	        <div class="row">
-		        <p class="muted credit text-center">&copy; 2013 - {{ "now"|date("Y") }} Khlimat Saidudinova &amp; Leonid Muzyka.</p>
+		        <p class="muted credit text-center">&copy; 2013 - {{ "now"|date("Y") }} Khalimat Saidudinova &amp; Leonid Muzyka.</p>
 	        </div>
         </div>
     </div>
 		<div>{{ this.page.redirected }} </div>
-</div>";s:5:"mtime";i:1550397312;s:6:"markup";s:5649:"<div id="footer">
+</div>";s:5:"mtime";i:1550422732;s:6:"markup";s:5650:"<div id="footer">
     <div class="black">
         <div class="container">
 	        <hr>
@@ -274,7 +274,7 @@
 		        <div class="col-sm-3"></div>
 	        </div>
 	        <div class="row">
-		        <p class="muted credit text-center">&copy; 2013 - {{ "now"|date("Y") }} Khlimat Saidudinova &amp; Leonid Muzyka.</p>
+		        <p class="muted credit text-center">&copy; 2013 - {{ "now"|date("Y") }} Khalimat Saidudinova &amp; Leonid Muzyka.</p>
 	        </div>
         </div>
     </div>
