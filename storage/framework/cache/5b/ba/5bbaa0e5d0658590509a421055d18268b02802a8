@@ -1,4 +1,4 @@
-1550397639a:1:{s:25:"magazin-fat-u-halimat.htm";a:11:{s:8:"fileName";s:25:"magazin-fat-u-halimat.htm";s:7:"content";s:4008:"title = "Фата мечты!"
+1550398703a:1:{s:25:"magazin-fat-u-halimat.htm";a:11:{s:8:"fileName";s:25:"magazin-fat-u-halimat.htm";s:7:"content";s:4044:"title = "Фата мечты!"
 url = "/"
 layout = "main_layout"
 description = "Здесь каждой невесте можно найти Фату Мечты!"
@@ -96,7 +96,7 @@ public function onPicClick() {
 
 <div class="container">
 	<div class="preambula">
-		<p>>> Нажмите на понравившейся модели и закажите <em><u> бесплатную</u></em>  консультацию с нашим модельером <b>любым удобным для вас способом</b> >></p>
+		<a href="{{ 'testovaya-forma'|page }}">>> Нажмите на понравившейся модели и закажите <em><u> бесплатную</u></em>  консультацию с нашим модельером <b>любым удобным для вас способом</b> >></a>
 	</div>
 
 	<div id="{{ magnific }}" class="magnific">
@@ -139,7 +139,7 @@ public function onPicClick() {
 
 {% if 0 %}
 	<div id="dumper"> {{ dump() }}</div>
-{% endif %}";s:5:"mtime";i:1550318541;s:6:"markup";s:2024:"<div class="jumbotron hidden-xs">
+{% endif %}";s:5:"mtime";i:1550398102;s:6:"markup";s:2060:"<div class="jumbotron hidden-xs">
 	<div class="container">
 		<div class="banner-container">
 			<img src="http://oct-veil-shop-fin/storage/app/uploads/public/5bd/f28/395/5bdf28395ca84989959861.jpg" />
@@ -152,7 +152,7 @@ public function onPicClick() {
 
 <div class="container">
 	<div class="preambula">
-		<p>>> Нажмите на понравившейся модели и закажите <em><u> бесплатную</u></em>  консультацию с нашим модельером <b>любым удобным для вас способом</b> >></p>
+		<a href="{{ 'testovaya-forma'|page }}">>> Нажмите на понравившейся модели и закажите <em><u> бесплатную</u></em>  консультацию с нашим модельером <b>любым удобным для вас способом</b> >></a>
 	</div>
 
 	<div id="{{ magnific }}" class="magnific">

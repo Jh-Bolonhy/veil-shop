@@ -504,6 +504,16 @@ html,body {
 #layout-footer {
   flex: 0 0 auto;
 }
+.preambula{
+	margin: 0 0 12.5px;
+}
+.preambula a {
+	color: #586667;
+}
+.preambula a:hover {
+	color: #56a56d;
+	text-decoration: none;
+}
 
 /* ================= Хэдэр ==================== */
 
