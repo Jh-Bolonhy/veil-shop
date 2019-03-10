@@ -84,7 +84,7 @@ class Orderform extends ComponentBase
 	        $lbl_phone => $post_phone,
 				],
         [
-	        $lbl_commentary => 'required|min:2|regex: /^[\pL\pM\pN_ .,;:!?-]+$/u',
+	        $lbl_commentary => 'required|min:2|regex: /^[\pL\pM\pN_ .,;:!?()-]+$/u',
 	        $lbl_name => 'required|min:3|regex: /^[\pL\pM -]+$/u',
 	        $lbl_phone => 'required|min:14|regex: /^[\pM\pN ()-]+$/u',
         ],
