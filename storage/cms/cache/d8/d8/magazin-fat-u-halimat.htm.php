@@ -1,5 +1,5 @@
 <?php 
-class Cms5c699e8759fa0426807206_67a7c7cd2c6b3e1c203606e8c3f268d6Class extends Cms\Classes\PageCode
+class Cms5caf2dfd7f8e8560100287_7871e77e7112729010d69c7a98f4e07cClass extends Cms\Classes\PageCode
 {
 public function onInit() {
 	if (session_status() == PHP_SESSION_NONE) {

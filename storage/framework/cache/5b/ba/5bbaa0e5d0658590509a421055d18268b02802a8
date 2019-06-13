@@ -1,6 +1,6 @@
-1552036422a:1:{s:25:"magazin-fat-u-halimat.htm";a:11:{s:8:"fileName";s:25:"magazin-fat-u-halimat.htm";s:7:"content";s:4075:"title = "Фата мечты!"
+1560422862a:1:{s:25:"magazin-fat-u-halimat.htm";a:12:{s:8:"fileName";s:25:"magazin-fat-u-halimat.htm";s:7:"content";s:4085:"title = "Фата мечты!"
 url = "/"
-layout = "main_layout"
+layout = "Main_2"
 description = "Здесь каждой невесте можно найти Фату Мечты!"
 is_hidden = 0
 
@@ -8,6 +8,8 @@ is_hidden = 0
 idGallery = 1
 height = 400
 width = "auto"
+
+[Orderform]
 ==
 <?php
 public function onInit() {
@@ -139,7 +141,7 @@ public function onPicClick() {
 
 {% if 0 %}
 	<div id="dumper"> {{ dump() }}</div>
-{% endif %}";s:5:"mtime";i:1550425596;s:6:"markup";s:2067:"<div class="jumbotron hidden-xs">
+{% endif %}";s:5:"mtime";i:1554984443;s:6:"markup";s:2067:"<div class="jumbotron hidden-xs">
 	<div class="container">
 		<div class="banner-container">
 			<img src="http://oct-veil-shop-fin/storage/app/uploads/public/5bd/f28/395/5bdf28395ca84989959861.jpg" />
@@ -265,4 +267,4 @@ public function onPicClick() {
 	var_dump($_SESSION['pics_chosen']);
 	echo "\n";
 	exit;
-}";s:5:"title";s:20:"Фата мечты!";s:3:"url";s:1:"/";s:6:"layout";s:11:"main_layout";s:11:"description";s:81:"Здесь каждой невесте можно найти Фату Мечты!";s:9:"is_hidden";s:1:"0";s:8:"magnific";a:3:{s:9:"idGallery";s:1:"1";s:6:"height";s:3:"400";s:5:"width";s:4:"auto";}}}
+}";s:5:"title";s:20:"Фата мечты!";s:3:"url";s:1:"/";s:6:"layout";s:6:"Main_2";s:11:"description";s:81:"Здесь каждой невесте можно найти Фату Мечты!";s:9:"is_hidden";s:1:"0";s:8:"magnific";a:3:{s:9:"idGallery";s:1:"1";s:6:"height";s:3:"400";s:5:"width";s:4:"auto";}s:9:"Orderform";a:0:{}}}

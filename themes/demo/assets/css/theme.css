@@ -491,6 +491,7 @@ body {
 /*  ============================================= Новые классы =========================================== */
 html,body {
 	height:100%;
+	background-image: url("http://oct-veil-shop-fin/themes/demo/assets/images/bg_satin1.jpg");
 }
 .wrapper {
   display: flex;
